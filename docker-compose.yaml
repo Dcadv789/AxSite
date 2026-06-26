@@ -1,15 +1,16 @@
-# Stack do Coolify: os dois sites da Axory a partir deste monorepo.
+# Stack do Coolify: os três sites da Axory a partir deste monorepo.
 #
 # Como usar no Coolify:
 #   1. Crie UM recurso do tipo "Docker Compose" apontando para este repositório
 #      (este arquivo, na raiz, é o compose).
-#   2. O Coolify vai subir os DOIS serviços abaixo, em containers separados.
+#   2. O Coolify vai subir os TRÊS serviços abaixo, em containers separados.
 #   3. Em cada serviço, defina o "Domain" (FQDN) no Coolify — é assim que você
 #      troca o subdomínio de cada um, sem mexer no código.
 #
 #   Sugestão de domínios:
 #     axsite  -> https://axory.com.br        (ou www.axory.com.br)
 #     ajuda   -> https://ajuda.axory.com.br
+#     bio     -> https://bio.axory.com.br
 #
 # Cada app já tem o seu próprio Dockerfile + nginx.conf e builda isolado
 # (o contexto de build é a pasta do app).
@@ -27,6 +28,14 @@ services:
   ajuda:
     build:
       context: ./apps/ajuda-axory
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    expose:
+      - "80"
+
+  bio:
+    build:
+      context: ./apps/bio-axory
       dockerfile: Dockerfile
     restart: unless-stopped
     expose:

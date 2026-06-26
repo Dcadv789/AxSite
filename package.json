@@ -7,9 +7,11 @@
   "scripts": {
     "dev:axsite": "npm run dev -w @axory/axsite",
     "dev:ajuda": "npm run dev -w @axory/ajuda-axory",
+    "dev:bio": "npm run dev -w @axory/bio-axory",
     "build:axsite": "npm run build -w @axory/axsite",
     "build:ajuda": "npm run build -w @axory/ajuda-axory",
-    "build": "npm run build:axsite && npm run build:ajuda",
+    "build:bio": "npm run build -w @axory/bio-axory",
+    "build": "npm run build:axsite && npm run build:ajuda && npm run build:bio",
     "lint": "npm run lint --workspaces --if-present"
   }
 }
