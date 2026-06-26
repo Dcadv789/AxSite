@@ -12,6 +12,16 @@ export default defineConfig({
         ]
       }
     })
+    ,
+    {
+      name: 'clear-sw-dev',
+      configureServer(server) {
+        server.middlewares.use((_req, res, next) => {
+          res.setHeader('Clear-Site-Data', '"executionContexts"');
+          next();
+        });
+      },
+    },
   ],
   optimizeDeps: {
     include: ['react', 'react-dom'],

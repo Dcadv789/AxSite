@@ -1,0 +1,508 @@
+[
+  {
+    "id": "axchat-o-que-e",
+    "slug": "axchat-o-que-e",
+    "collectionId": "axchat-primeiros-passos",
+    "title": "O que é o AxChat",
+    "description": "Visão geral da plataforma de atendimento omnichannel com CRM e agentes de IA.",
+    "keywords": ["o-que-e", "visao-geral", "omnichannel", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-conta-e-papeis",
+      "axchat-navegacao",
+      "axchat-caixa-de-entrada"
+    ]
+  },
+  {
+    "id": "axchat-conta-e-papeis",
+    "slug": "axchat-conta-e-papeis",
+    "collectionId": "axchat-primeiros-passos",
+    "title": "Conta, organização e papéis",
+    "description": "Cadastro, login, multi-organização e os papéis OWNER, ADMIN e AGENTE.",
+    "keywords": ["conta", "organizacao", "papeis", "permissoes", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-o-que-e",
+      "axchat-navegacao",
+      "axchat-configuracoes-abas"
+    ]
+  },
+  {
+    "id": "axchat-navegacao",
+    "slug": "axchat-navegacao",
+    "collectionId": "axchat-primeiros-passos",
+    "title": "Navegação e barra lateral",
+    "description": "Os itens da barra lateral e como circular pela plataforma.",
+    "keywords": ["navegacao", "barra-lateral", "menu", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-o-que-e",
+      "axchat-conta-e-papeis",
+      "axchat-caixa-de-entrada"
+    ]
+  },
+  {
+    "id": "axchat-caixa-de-entrada",
+    "slug": "axchat-caixa-de-entrada",
+    "collectionId": "axchat-caixa-entrada",
+    "title": "Caixa de entrada (Inbox)",
+    "description": "Lista de conversas, janela de conversa, ficha do contato e registros do agente de IA.",
+    "keywords": ["caixa-de-entrada", "inbox", "conversas", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-conversas-status-acoes",
+      "axchat-privacidade-da-caixa",
+      "axchat-contatos"
+    ]
+  },
+  {
+    "id": "axchat-conversas-status-acoes",
+    "slug": "axchat-conversas-status-acoes",
+    "collectionId": "axchat-caixa-entrada",
+    "title": "Conversas: status e ações",
+    "description": "A máquina de estados das conversas e o que o atendente pode fazer em cada uma.",
+    "keywords": ["conversas", "status", "acoes", "atendimento", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-caixa-de-entrada",
+      "axchat-privacidade-da-caixa",
+      "axchat-funil-pipelines"
+    ]
+  },
+  {
+    "id": "axchat-privacidade-da-caixa",
+    "slug": "axchat-privacidade-da-caixa",
+    "collectionId": "axchat-caixa-entrada",
+    "title": "Privacidade da caixa",
+    "description": "Como a visibilidade por canal e por atribuição controla quem vê cada conversa.",
+    "keywords": ["privacidade", "visibilidade", "canal-privado", "atribuicao", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-caixa-de-entrada",
+      "axchat-conversas-status-acoes",
+      "axchat-canais-conectar"
+    ]
+  },
+  {
+    "id": "axchat-contatos",
+    "slug": "axchat-contatos",
+    "collectionId": "axchat-contatos-canais",
+    "title": "Contatos",
+    "description": "Diretório de contatos, múltiplos canais por pessoa, notas, tags e campos personalizados.",
+    "keywords": ["contatos", "diretorio", "tags", "notas", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-canais-conectar",
+      "axchat-caixa-de-entrada",
+      "axchat-funil-pipelines"
+    ]
+  },
+  {
+    "id": "axchat-canais-conectar",
+    "slug": "axchat-canais-conectar",
+    "collectionId": "axchat-contatos-canais",
+    "title": "Canais e como conectar",
+    "description": "Tipos de canais suportados e como conectar WhatsApp, Instagram e Telegram.",
+    "keywords": ["canais", "whatsapp", "instagram", "telegram", "conectar", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-templates-whatsapp",
+      "axchat-contatos",
+      "axchat-integracoes-visao-geral"
+    ]
+  },
+  {
+    "id": "axchat-templates-whatsapp",
+    "slug": "axchat-templates-whatsapp",
+    "collectionId": "axchat-contatos-canais",
+    "title": "Templates do WhatsApp (HSM)",
+    "description": "Mensagens-modelo aprovadas pela Meta para falar com o cliente fora da janela de 24h.",
+    "keywords": ["templates", "hsm", "whatsapp", "janela-24h", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-canais-conectar",
+      "axchat-caixa-de-entrada",
+      "axchat-glossario"
+    ]
+  },
+  {
+    "id": "axchat-roteamento-sla-watchdog",
+    "slug": "axchat-roteamento-sla-watchdog",
+    "collectionId": "axchat-roteamento-automacoes",
+    "title": "Departamentos, SLA e Watchdog",
+    "description": "Distribuição de conversas por departamento, metas de SLA e reengajamento automático.",
+    "keywords": ["departamentos", "sla", "watchdog", "roteamento", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-automacoes",
+      "axchat-chatbot",
+      "axchat-conversas-status-acoes"
+    ]
+  },
+  {
+    "id": "axchat-automacoes",
+    "slug": "axchat-automacoes",
+    "collectionId": "axchat-roteamento-automacoes",
+    "title": "Automações",
+    "description": "Regras gatilho → ação para automatizar tags, funil, atribuição e mensagens.",
+    "keywords": ["automacoes", "gatilho", "acao", "regras", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-roteamento-sla-watchdog",
+      "axchat-chatbot",
+      "axchat-funil-pipelines"
+    ]
+  },
+  {
+    "id": "axchat-chatbot",
+    "slug": "axchat-chatbot",
+    "collectionId": "axchat-roteamento-automacoes",
+    "title": "Chatbot (fluxos sem código)",
+    "description": "Construtor visual de fluxos determinísticos por palavra-chave, vinculados a canais.",
+    "keywords": ["chatbot", "fluxos", "sem-codigo", "menu", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-automacoes",
+      "axchat-agentes-de-ia",
+      "axchat-roteamento-sla-watchdog"
+    ]
+  },
+  {
+    "id": "axchat-funil-pipelines",
+    "slug": "axchat-funil-pipelines",
+    "collectionId": "axchat-funil",
+    "title": "Funil de vendas (Pipelines)",
+    "description": "Pipelines em Kanban, cards de negócio e vínculo com conversas do chat.",
+    "keywords": ["funil", "pipeline", "kanban", "vendas", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-ferramentas-dia-a-dia",
+      "axchat-contatos",
+      "axchat-automacoes"
+    ]
+  },
+  {
+    "id": "axchat-ferramentas-dia-a-dia",
+    "slug": "axchat-ferramentas-dia-a-dia",
+    "collectionId": "axchat-funil",
+    "title": "Ferramentas do dia a dia",
+    "description": "Tags, respostas rápidas, visões da caixa, CSAT, notificações e catálogo de produtos.",
+    "keywords": ["tags", "respostas-rapidas", "csat", "notificacoes", "produtos", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-funil-pipelines",
+      "axchat-caixa-de-entrada",
+      "axchat-configuracoes-abas"
+    ]
+  },
+  {
+    "id": "axchat-agentes-de-ia",
+    "slug": "axchat-agentes-de-ia",
+    "collectionId": "axchat-agentes-ia",
+    "title": "Agentes de IA (Jarvis)",
+    "description": "Como os agentes atendem com IA: tipos, setores, skills, tools e execuções.",
+    "keywords": ["agentes-de-ia", "jarvis", "skills", "tools", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-memoria-dos-agentes",
+      "axchat-configurar-ia",
+      "axchat-chatbot"
+    ]
+  },
+  {
+    "id": "axchat-memoria-dos-agentes",
+    "slug": "axchat-memoria-dos-agentes",
+    "collectionId": "axchat-agentes-ia",
+    "title": "Memória dos agentes",
+    "description": "As três camadas de memória dos agentes: curto prazo, longo prazo e RAG.",
+    "keywords": ["memoria", "rag", "longo-prazo", "agentes", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-agentes-de-ia",
+      "axchat-configurar-ia",
+      "axchat-privacidade-da-caixa"
+    ]
+  },
+  {
+    "id": "axchat-configurar-ia",
+    "slug": "axchat-configurar-ia",
+    "collectionId": "axchat-agentes-ia",
+    "title": "Onde configurar a IA",
+    "description": "Configurações → IA: liga/desliga, horários, notas do negócio, teto de tokens e LLM.",
+    "keywords": ["configurar-ia", "llm", "tokens", "watchdog", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-agentes-de-ia",
+      "axchat-memoria-dos-agentes",
+      "axchat-configuracoes-abas"
+    ]
+  },
+  {
+    "id": "axchat-marketing-crew",
+    "slug": "axchat-marketing-crew",
+    "collectionId": "axchat-marketing",
+    "title": "Marketing (add-on)",
+    "description": "A crew de 6 agentes que opera Instagram, Google Business e anúncios, com aprovação humana.",
+    "keywords": ["marketing", "crew", "anuncios", "instagram", "add-on", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-agentes-de-ia",
+      "axchat-integracoes-visao-geral",
+      "axchat-assistente-pessoal"
+    ]
+  },
+  {
+    "id": "axchat-assistente-pessoal",
+    "slug": "axchat-assistente-pessoal",
+    "collectionId": "axchat-assistente",
+    "title": "Assistente Pessoal (add-on)",
+    "description": "A IA privada do dono: chat, tarefas, agenda, lembretes, briefings e privacidade total.",
+    "keywords": ["assistente-pessoal", "lembretes", "agenda", "add-on", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-agentes-de-ia",
+      "axchat-marketing-crew",
+      "axchat-configurar-ia"
+    ]
+  },
+  {
+    "id": "axchat-crons",
+    "slug": "axchat-crons",
+    "collectionId": "axchat-config-dashboard",
+    "title": "Crons (agendamento de agentes)",
+    "description": "Agende um agente para rodar uma tarefa numa cadência, com presets ou expressão cron.",
+    "keywords": ["crons", "agendamento", "agentes", "cron", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-configuracoes-abas",
+      "axchat-dashboard",
+      "axchat-agentes-de-ia"
+    ]
+  },
+  {
+    "id": "axchat-dashboard",
+    "slug": "axchat-dashboard",
+    "collectionId": "axchat-config-dashboard",
+    "title": "Dashboard e métricas",
+    "description": "Visão executiva: SLA, CSAT, FCR, volume por canal, horários de pico e desempenho.",
+    "keywords": ["dashboard", "metricas", "sla", "csat", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-configuracoes-abas",
+      "axchat-roteamento-sla-watchdog",
+      "axchat-crons"
+    ]
+  },
+  {
+    "id": "axchat-configuracoes-abas",
+    "slug": "axchat-configuracoes-abas",
+    "collectionId": "axchat-config-dashboard",
+    "title": "Configurações (abas)",
+    "description": "Resumo de cada aba de configuração da organização no AxChat.",
+    "keywords": ["configuracoes", "abas", "ajustes", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-crons",
+      "axchat-dashboard",
+      "axchat-configurar-ia"
+    ]
+  },
+  {
+    "id": "axchat-super-admin",
+    "slug": "axchat-super-admin",
+    "collectionId": "axchat-admin-integracoes",
+    "title": "Super Admin (plataforma)",
+    "description": "Painel de plataforma: organizações, planos, limites, cobrança, add-ons e auditoria.",
+    "keywords": ["super-admin", "plataforma", "planos", "add-ons", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-integracoes-visao-geral",
+      "axchat-marketing-crew",
+      "axchat-assistente-pessoal"
+    ]
+  },
+  {
+    "id": "axchat-integracoes-visao-geral",
+    "slug": "axchat-integracoes-visao-geral",
+    "collectionId": "axchat-admin-integracoes",
+    "title": "Integrações (visão geral)",
+    "description": "Tabela de integrações: para quê serve cada uma, o que precisa e onde configurar.",
+    "keywords": ["integracoes", "whatsapp", "meta", "google", "deepseek", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-canais-conectar",
+      "axchat-super-admin",
+      "axchat-marketing-crew"
+    ]
+  },
+  {
+    "id": "axchat-glossario",
+    "slug": "axchat-glossario",
+    "collectionId": "axchat-admin-integracoes",
+    "title": "Glossário",
+    "description": "Termos rápidos: omnichannel, janela de 24h, HSM, SLA, skill/tool, gating e mais.",
+    "keywords": ["glossario", "termos", "definicoes", "axchat"],
+    "updatedAt": "2026-06-26",
+    "related": [
+      "axchat-o-que-e",
+      "axchat-integracoes-visao-geral",
+      "axchat-agentes-de-ia"
+    ]
+  },
+  {
+    "id": "axchat-diretrizes-e-politicas",
+    "slug": "axchat-diretrizes-e-politicas",
+    "collectionId": "axchat-diretrizes",
+    "title": "Diretrizes e Políticas",
+    "description": "Documentos legais, requisitos, suporte e políticas de uso do AxChat.",
+    "keywords": ["diretrizes-e-politicas", "axchat"],
+    "zdgPath": "diretrizes-e-politicas",
+    "createdAt": "2024-05-22",
+    "updatedAt": "2026-06-25",
+    "related": [
+      "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+      "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico",
+      "axchat-diretrizes-e-politicas-termos-e-condicoes-gerais-de-uso-e-licenciamento"
+    ]
+  },
+  {
+    "id": "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+    "slug": "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+    "collectionId": "axchat-diretrizes",
+    "title": "Requisitos de uso",
+    "description": "Requisitos técnicos de navegador, conexão e plataformas para utilizar o AxChat em nuvem.",
+    "keywords": [
+      "diretrizes-e-politicas",
+      "pre-requisitos-de-instalacao-e-utilizacao",
+      "axchat"
+    ],
+    "zdgPath": "diretrizes-e-politicas/pre-requisitos-de-instalacao-e-utilizacao",
+    "createdAt": "2024-05-22",
+    "updatedAt": "2026-06-25",
+    "related": [
+      "axchat-diretrizes-e-politicas",
+      "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico",
+      "axchat-diretrizes-e-politicas-termos-e-condicoes-gerais-de-uso-e-licenciamento"
+    ]
+  },
+  {
+    "id": "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico",
+    "slug": "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico",
+    "collectionId": "axchat-diretrizes",
+    "title": "Política de Suporte Técnico",
+    "description": "Canais, horários, SLA e escopo do suporte técnico do AxChat.",
+    "keywords": [
+      "diretrizes-e-politicas",
+      "politica-de-suporte-tecnico",
+      "axchat"
+    ],
+    "zdgPath": "diretrizes-e-politicas/politica-de-suporte-tecnico",
+    "createdAt": "2024-05-22",
+    "updatedAt": "2026-06-25",
+    "related": [
+      "axchat-diretrizes-e-politicas",
+      "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+      "axchat-diretrizes-e-politicas-termos-e-condicoes-gerais-de-uso-e-licenciamento"
+    ]
+  },
+  {
+    "id": "axchat-diretrizes-e-politicas-termos-e-condicoes-gerais-de-uso-e-licenciamento",
+    "slug": "axchat-diretrizes-e-politicas-termos-e-condicoes-gerais-de-uso-e-licenciamento",
+    "collectionId": "axchat-diretrizes",
+    "title": "Termos e Condições Gerais de Uso e Licenciamento",
+    "description": "Contrato de licenciamento e regras de uso do AxChat em modelo SaaS.",
+    "keywords": [
+      "diretrizes-e-politicas",
+      "termos-e-condicoes-gerais-de-uso-e-licenciamento",
+      "axchat"
+    ],
+    "zdgPath": "diretrizes-e-politicas/termos-e-condicoes-gerais-de-uso-e-licenciamento",
+    "createdAt": "2024-05-22",
+    "updatedAt": "2026-05-12",
+    "related": [
+      "axchat-diretrizes-e-politicas",
+      "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+      "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico"
+    ]
+  },
+  {
+    "id": "axchat-diretrizes-e-politicas-aviso-de-privacidade",
+    "slug": "axchat-diretrizes-e-politicas-aviso-de-privacidade",
+    "collectionId": "axchat-diretrizes",
+    "title": "Aviso de Privacidade",
+    "description": "Política de Privacidade do Sistema AxChat",
+    "keywords": [
+      "diretrizes-e-politicas",
+      "aviso-de-privacidade",
+      "axchat"
+    ],
+    "zdgPath": "diretrizes-e-politicas/aviso-de-privacidade",
+    "createdAt": "2024-05-22",
+    "updatedAt": "2026-05-12",
+    "related": [
+      "axchat-diretrizes-e-politicas",
+      "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+      "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico"
+    ]
+  },
+  {
+    "id": "axchat-diretrizes-e-politicas-manutencao-e-seguranca",
+    "slug": "axchat-diretrizes-e-politicas-manutencao-e-seguranca",
+    "collectionId": "axchat-diretrizes",
+    "title": "Manutenção e Segurança",
+    "description": "Atualizações, credenciais, backups e boas práticas de segurança na plataforma.",
+    "keywords": [
+      "diretrizes-e-politicas",
+      "manutencao-e-seguranca",
+      "axchat"
+    ],
+    "zdgPath": "diretrizes-e-politicas/manutencao-e-seguranca",
+    "createdAt": "2024-05-22",
+    "updatedAt": "2026-06-25",
+    "related": [
+      "axchat-diretrizes-e-politicas",
+      "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+      "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico"
+    ]
+  },
+  {
+    "id": "axchat-diretrizes-e-politicas-api-oficial-vs-api-nao-oficial",
+    "slug": "axchat-diretrizes-e-politicas-api-oficial-vs-api-nao-oficial",
+    "collectionId": "axchat-diretrizes",
+    "title": "API Oficial vs API Não Oficial",
+    "description": "Comparativo entre API Oficial (WABA) e APIs não oficiais do WhatsApp.",
+    "keywords": [
+      "diretrizes-e-politicas",
+      "api-oficial-vs-api-nao-oficial",
+      "axchat"
+    ],
+    "zdgPath": "diretrizes-e-politicas/api-oficial-vs-api-nao-oficial",
+    "createdAt": "2024-05-22",
+    "updatedAt": "2026-06-25",
+    "related": [
+      "axchat-diretrizes-e-politicas",
+      "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+      "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico"
+    ]
+  },
+  {
+    "id": "axchat-diretrizes-e-politicas-lid-do-whatsapp",
+    "slug": "axchat-diretrizes-e-politicas-lid-do-whatsapp",
+    "collectionId": "axchat-diretrizes",
+    "title": "LID do WhatsApp",
+    "description": "Identificador LID do WhatsApp e como corrigir contatos duplicados no AxChat.",
+    "keywords": [
+      "diretrizes-e-politicas",
+      "lid-do-whatsapp",
+      "axchat"
+    ],
+    "zdgPath": "diretrizes-e-politicas/lid-do-whatsapp",
+    "createdAt": "2024-05-22",
+    "updatedAt": "2026-06-25",
+    "related": [
+      "axchat-diretrizes-e-politicas",
+      "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
+      "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico"
+    ]
+  }
+]

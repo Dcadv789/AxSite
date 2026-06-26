@@ -25,7 +25,8 @@ const initializeApp = async () => {
     ];
 
     // Preload sem bloquear o render
-    requestIdleCallback(() => {
+    const scheduleIdle = window.requestIdleCallback ?? ((cb: IdleRequestCallback) => window.setTimeout(() => cb({ didTimeout: false, timeRemaining: () => 50 } as IdleDeadline), 1));
+    scheduleIdle(() => {
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
