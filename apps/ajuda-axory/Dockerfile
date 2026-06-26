@@ -2,10 +2,12 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
-COPY package.json ./
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm ci
 
 COPY . .
+# mermaid + diagramas tornam o bundle pesado; aumenta o heap do Node no build.
+ENV NODE_OPTIONS=--max-old-space-size=4096
 RUN npm run build
 
 FROM nginx:alpine
