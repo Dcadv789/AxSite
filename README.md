@@ -44,7 +44,7 @@ Os dois sites saem do mesmo repositório, em **containers separados**, cada um c
 Mantém os dois serviços juntos no Coolify, mas em containers separados. Ideal para trocar o subdomínio de cada um num lugar só.
 
 1. No Coolify, crie **um** recurso do tipo **Docker Compose** apontando para este repositório.
-2. O compose usado é o [`docker-compose.yml`](./docker-compose.yml) da raiz (sobe os serviços `axsite` e `ajuda`).
+2. O compose usado é o [`docker-compose.yaml`](./docker-compose.yaml) da raiz (sobe os serviços `axsite` e `ajuda`).
 3. Em **cada serviço**, defina o **Domain (FQDN)** no Coolify — é aí que você troca o subdomínio. O Coolify cuida do SSL.
 
 ### Opção B — Dois recursos separados (Base Directory)
