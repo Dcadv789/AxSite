@@ -6,6 +6,11 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { GTMEvents, gtmEvent } from '../utils/gtm';
 
+// Logo da Axory servida pelo proxy de imagens (img.axory.com.br).
+// Dark mode usa a versão branca; light mode usa a versão azul/cinza.
+const LOGO_DARK = 'https://img.axory.com.br/insecure/rs:fit:1440:1080/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Logo_axory_branco.svg@webp';
+const LOGO_LIGHT = 'https://img.axory.com.br/insecure/rs:fit:1440:1080/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Ativo_35_-_Logo_Azul_Cinza_feb1hr%20(1).svg@webp';
+
 interface NavItem {
   name: string;
   url: string;
@@ -161,7 +166,7 @@ export function Navbar() {
                 className="flex items-center cursor-pointer"
               >
                 <img
-                  src="https://res.cloudinary.com/ducd9j4tx/image/upload/v1751041685/Ativo_25_n6x26v.svg"
+                  src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
                   alt="Logo Axory"
                   className="h-8 w-auto hover:opacity-80 transition-opacity"
                   width={32}
@@ -215,7 +220,7 @@ export function Navbar() {
                 className="flex items-center cursor-pointer"
               >
                 <img
-                  src="https://res.cloudinary.com/ducd9j4tx/image/upload/v1751041685/Ativo_25_n6x26v.svg"
+                  src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
                   alt="Logo Axory"
                   className="h-8 w-auto hover:opacity-80 transition-opacity"
                   width={32}

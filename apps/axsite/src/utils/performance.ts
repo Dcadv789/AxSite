@@ -40,7 +40,8 @@ export function preloadImage(src: string): Promise<void> {
 // Preload de recursos críticos
 export async function preloadCriticalResources() {
   const criticalImages = [
-    'https://res.cloudinary.com/ducd9j4tx/image/upload/v1751041685/Ativo_25_n6x26v.svg',
+    'https://img.axory.com.br/insecure/rs:fit:1440:1080/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Logo_axory_branco.svg@webp',
+    'https://img.axory.com.br/insecure/rs:fit:1440:1080/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Ativo_35_-_Logo_Azul_Cinza_feb1hr%20(1).svg@webp',
     'https://aznchizusxvfegpubttp.supabase.co/storage/v1/object/public/logos//banner1.svg',
   ];
 

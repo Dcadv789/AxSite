@@ -8,7 +8,7 @@ export function FooterMobile() {
     <div className="lg:hidden px-6 pt-12 pb-8">
       <div className="flex flex-col items-center text-center">
         <img
-          src="https://res.cloudinary.com/ducd9j4tx/image/upload/v1751041685/Ativo_25_n6x26v.svg"
+          src="https://img.axory.com.br/insecure/rs:fit:1440:1080/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Logo_axory_branco.svg@webp"
           alt="Axory Capital"
           className="h-[70px] w-auto brightness-0 invert mb-6"
         />

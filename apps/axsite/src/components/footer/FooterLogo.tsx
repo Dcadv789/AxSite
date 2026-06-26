@@ -8,7 +8,7 @@ export function FooterLogo() {
     <div className="lg:col-span-3">
       <div className="space-y-8">
         <img
-          src="https://res.cloudinary.com/ducd9j4tx/image/upload/v1751041685/Ativo_25_n6x26v.svg"
+          src="https://img.axory.com.br/insecure/rs:fit:1440:1080/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Logo_axory_branco.svg@webp"
           alt="Axory Capital"
           className="h-16 w-auto brightness-0 invert"
         />
