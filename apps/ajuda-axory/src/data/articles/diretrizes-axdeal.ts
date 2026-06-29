@@ -18,33 +18,31 @@ export const diretrizesAxdealArticles: Article[] = [
       'operador',
       'anpd',
     ],
-    createdAt: '2026-06-29',
-    updatedAt: '2026-06-29',
+    createdAt: '2026-01-01',
+    updatedAt: '2026-01-01',
     related: ['termos-de-uso-axdeal', 'visao-geral-lgpd'],
     body: `
 # Política de Privacidade do AxDeal
 
-**Última atualização:** 29 de junho de 2026 · **Vigência:** a partir de 29 de junho de 2026
+**Última atualização:** 1 de janeiro de 2026 · **Vigência:** a partir de 1 de janeiro de 2026
 
-> **Aviso:** este documento é um modelo de base, preparado conforme a legislação brasileira. Antes de publicar, confira os campos entre colchetes (razão social, CNPJ, endereço, nome do Encarregado) e submeta o texto à validação do seu jurídico.
-
-Esta Política de Privacidade descreve como a **Axory** ("nós") trata dados pessoais no contexto do **AxDeal**, sua plataforma de gestão financeira e operacional (ERP) ofertada no modelo SaaS, em conformidade com a **Lei Geral de Proteção de Dados Pessoais – LGPD (Lei nº 13.709/2018)**, o **Marco Civil da Internet (Lei nº 12.965/2014)** e demais normas aplicáveis.
+Esta Política de Privacidade descreve como a **Axory Capital Group** ("Axory", "nós") trata dados pessoais no contexto do **AxDeal**, sua plataforma de gestão financeira e operacional (ERP) ofertada no modelo SaaS, em conformidade com a **Lei Geral de Proteção de Dados Pessoais – LGPD (Lei nº 13.709/2018)**, o **Marco Civil da Internet (Lei nº 12.965/2014)** e demais normas aplicáveis.
 
 ## 1. Quem é o Controlador
 
 | Campo | Informação |
 |-------|-----------|
-| **Razão social** | [Razão social completa da Axory] |
-| **CNPJ** | [00.000.000/0001-00] |
-| **Endereço** | [Endereço completo] |
+| **Razão social** | Axory Capital Group |
+| **CNPJ** | 49.132.263/0001-43 |
+| **Endereço** | Rua Teodoro Sampaio, 744, Conjunto 108, Pinheiros, São Paulo/SP, CEP 05406-000 |
 | **Contato** | contato@axory.com.br |
 
 ## 2. Encarregado pelo Tratamento de Dados (DPO)
 
 Em atendimento ao art. 41 da LGPD, o canal de comunicação com o **Encarregado (DPO)** é:
 
-- **Nome:** [Nome do Encarregado]
-- **E-mail:** privacidade@axory.com.br
+- **Encarregado:** Axory Capital Group
+- **E-mail:** contato@axory.com.br
 
 ## 3. A quem esta política se aplica
 
@@ -122,7 +120,7 @@ Nos termos do **art. 18 da LGPD**, você pode, a qualquer tempo, requerer:
 - Informação sobre a possibilidade de não consentir e as consequências;
 - Revogação do consentimento.
 
-**Como exercer:** envie um pedido para **privacidade@axory.com.br**. Responderemos nos prazos da LGPD. Se os dados que você quer exercer direitos foram inseridos por uma empresa assinante (em que somos Operadora), encaminharemos a solicitação a ela ou orientaremos você a contatá-la diretamente, por ser a Controladora.
+**Como exercer:** envie um pedido para **contato@axory.com.br**. Responderemos nos prazos da LGPD. Se os dados sobre os quais você quer exercer direitos foram inseridos por uma empresa assinante (em que somos Operadora), encaminharemos a solicitação a ela ou orientaremos você a contatá-la diretamente, por ser a Controladora.
 
 Você também pode apresentar reclamação à **Autoridade Nacional de Proteção de Dados (ANPD)**.
 
@@ -136,7 +134,7 @@ Podemos atualizar esta Política para refletir mudanças legais ou no serviço. 
 
 ## 14. Contato
 
-Dúvidas sobre privacidade e proteção de dados: **privacidade@axory.com.br**. Demais assuntos: **contato@axory.com.br**.
+Para dúvidas sobre privacidade e proteção de dados, fale com a gente em **contato@axory.com.br**.
 `,
   },
   {
@@ -156,17 +154,15 @@ Dúvidas sobre privacidade e proteção de dados: **privacidade@axory.com.br**. 
       'marco civil',
       'foro',
     ],
-    createdAt: '2026-06-29',
-    updatedAt: '2026-06-29',
+    createdAt: '2026-01-01',
+    updatedAt: '2026-01-01',
     related: ['politica-de-privacidade-axdeal', 'visao-geral-lgpd'],
     body: `
 # Termos de Uso do AxDeal
 
-**Última atualização:** 29 de junho de 2026 · **Vigência:** a partir de 29 de junho de 2026
+**Última atualização:** 1 de janeiro de 2026 · **Vigência:** a partir de 1 de janeiro de 2026
 
-> **Aviso:** este documento é um modelo de base, preparado conforme a legislação brasileira. Antes de publicar, confira os campos entre colchetes (razão social, CNPJ, endereço, comarca de foro) e submeta o texto à validação do seu jurídico.
-
-Estes Termos de Uso ("Termos") regulam o acesso e a utilização do **AxDeal**, plataforma de gestão financeira e operacional (ERP) disponibilizada em modelo SaaS pela **Axory** — [Razão social completa], inscrita no CNPJ sob nº [00.000.000/0001-00], com sede em [endereço] ("Axory", "nós"). Ao criar uma conta ou utilizar o AxDeal, você ("Usuário" ou "Contratante") declara que leu, entendeu e **concorda integralmente** com estes Termos.
+Estes Termos de Uso ("Termos") regulam o acesso e a utilização do **AxDeal**, plataforma de gestão financeira e operacional (ERP) disponibilizada em modelo SaaS pela **Axory Capital Group**, inscrita no CNPJ sob nº 49.132.263/0001-43, com sede na Rua Teodoro Sampaio, 744, Conjunto 108, Pinheiros, São Paulo/SP, CEP 05406-000 ("Axory", "nós"). Ao criar uma conta ou utilizar o AxDeal, você ("Usuário" ou "Contratante") declara que leu, entendeu e **concorda integralmente** com estes Termos.
 
 A relação observa, no que couber, o **Código Civil (Lei nº 10.406/2002)**, o **Código de Defesa do Consumidor (Lei nº 8.078/1990)**, o **Marco Civil da Internet (Lei nº 12.965/2014)** e a **LGPD (Lei nº 13.709/2018)**.
 
@@ -251,7 +247,7 @@ Podemos atualizar estes Termos a qualquer tempo. A versão vigente é a publicad
 
 ## 14. Lei aplicável e foro
 
-Estes Termos são regidos pelas **leis da República Federativa do Brasil**. Fica eleito o foro da comarca de **[Comarca/UF]** para dirimir controvérsias, com renúncia a qualquer outro, por mais privilegiado que seja, ressalvada, nas relações de consumo, a competência prevista no CDC (foro do domicílio do consumidor).
+Estes Termos são regidos pelas **leis da República Federativa do Brasil**. Fica eleito o foro da comarca de **São Paulo/SP** para dirimir controvérsias, com renúncia a qualquer outro, por mais privilegiado que seja, ressalvada, nas relações de consumo, a competência prevista no CDC (foro do domicílio do consumidor).
 
 ## 15. Contato
 
