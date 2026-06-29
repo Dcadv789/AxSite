@@ -19,12 +19,12 @@ export const diretrizesAxdealArticles: Article[] = [
       'anpd',
     ],
     createdAt: '2026-01-01',
-    updatedAt: '2026-01-01',
+    updatedAt: '2026-06-30',
     related: ['termos-de-uso-axdeal', 'visao-geral-lgpd'],
     body: `
 # Política de Privacidade do AxDeal
 
-**Última atualização:** 1 de janeiro de 2026 · **Vigência:** a partir de 1 de janeiro de 2026
+**Última atualização:** 30 de junho de 2026 · **Vigência:** a partir de 1 de janeiro de 2026
 
 Esta Política de Privacidade descreve como a **Axory Capital Group** ("Axory", "nós") trata dados pessoais no contexto do **AxDeal**, sua plataforma de gestão financeira e operacional (ERP) ofertada no modelo SaaS, em conformidade com a **Lei Geral de Proteção de Dados Pessoais – LGPD (Lei nº 13.709/2018)**, o **Marco Civil da Internet (Lei nº 12.965/2014)** e demais normas aplicáveis.
 
@@ -155,12 +155,12 @@ Para dúvidas sobre privacidade e proteção de dados, fale com a gente em **con
       'foro',
     ],
     createdAt: '2026-01-01',
-    updatedAt: '2026-01-01',
+    updatedAt: '2026-06-30',
     related: ['politica-de-privacidade-axdeal', 'visao-geral-lgpd'],
     body: `
 # Termos de Uso do AxDeal
 
-**Última atualização:** 1 de janeiro de 2026 · **Vigência:** a partir de 1 de janeiro de 2026
+**Última atualização:** 30 de junho de 2026 · **Vigência:** a partir de 1 de janeiro de 2026
 
 Estes Termos de Uso ("Termos") regulam o acesso e a utilização do **AxDeal**, plataforma de gestão financeira e operacional (ERP) disponibilizada em modelo SaaS pela **Axory Capital Group**, inscrita no CNPJ sob nº 49.132.263/0001-43, com sede na Rua Teodoro Sampaio, 744, Conjunto 108, Pinheiros, São Paulo/SP, CEP 05406-000 ("Axory", "nós"). Ao criar uma conta ou utilizar o AxDeal, você ("Usuário" ou "Contratante") declara que leu, entendeu e **concorda integralmente** com estes Termos.
 
