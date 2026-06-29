@@ -26,6 +26,10 @@ export const sidebarGroupsByProduct: Record<
         'seguranca-lgpd',
       ],
     },
+    {
+      label: 'Diretrizes e Políticas',
+      collectionIds: ['axdeal-diretrizes'],
+    },
   ],
   axchat: [
     {

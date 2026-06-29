@@ -6,6 +6,7 @@ import { resultadosDreArticles } from './resultados-dre';
 import { cadastrosArticles } from './cadastros';
 import { configuracoesArticles } from './configuracoes';
 import { stubArticles } from './stubs';
+import { diretrizesAxdealArticles } from './diretrizes-axdeal';
 import { axchatArticles } from './axchat';
 
 export const articles = [
@@ -17,5 +18,6 @@ export const articles = [
   ...cadastrosArticles,
   ...configuracoesArticles,
   ...stubArticles,
+  ...diretrizesAxdealArticles,
   ...axchatArticles,
 ];

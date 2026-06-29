@@ -101,6 +101,15 @@ export const collections: Collection[] = [
     order: 11,
   },
   {
+    id: 'axdeal-diretrizes',
+    slug: 'axdeal-diretrizes',
+    productId: 'axdeal',
+    title: 'Diretrizes e Políticas',
+    description: 'Política de Privacidade e Termos de Uso do AxDeal, com base na legislação brasileira.',
+    icon: 'Scale',
+    order: 12,
+  },
+  {
     id: 'axchat-primeiros-passos',
     slug: 'axchat-primeiros-passos',
     productId: 'axchat',
