@@ -180,7 +180,11 @@ Os dados operacionais gerados pelo Cliente na plataforma (contatos, conversas, m
 
 ### 7.3. Camada Tech Provider Meta
 
-Para conexões via API Oficial do WhatsApp, Instagram e Messenger, a Axory opera aplicativo Meta certificado como Tech Provider. Nesse contexto, tratamos dados técnicos da Meta (tokens, webhooks, indicadores de qualidade e status de conexão) — não o conteúdo das mensagens dos contatos finais — para execução do contrato, segurança e prevenção a fraudes.
+Para conexões via API Oficial do WhatsApp, Instagram e Messenger, a Axory opera aplicativo Meta certificado como Tech Provider. Nessa condição:
+
+- **a) Dados técnicos da integração.** Tratamos dados técnicos da Meta — tokens de acesso, identificadores (App ID, WABA ID, phone number ID), eventos de webhook, indicadores de qualidade e status de conexão — para execução do contrato, segurança, prevenção a fraudes e manutenção da integração.
+- **b) Conteúdo das mensagens dos contatos finais.** Para viabilizar o serviço de atendimento contratado pelo Cliente, o conteúdo das conversas (mensagens, mídias e metadados) dos contatos finais trafega e é processado pela infraestrutura da Axory — recebido via webhooks da Meta, exibido no painel do Cliente e roteado entre os canais conectados. Em relação a esse conteúdo, a Axory atua exclusivamente como Operadora, tratando os dados sob instrução e por conta do Cliente, que permanece Controlador. A Axory não utiliza o conteúdo dessas mensagens para finalidades próprias (como marketing, treinamento de modelos ou análise não solicitada) e o mantém apenas pelo tempo necessário à prestação do serviço, conforme a seção 8.
+- **c) Compartilhamento com a Meta.** O tráfego de mensagens pela API Oficial implica processamento pela Meta, na qualidade de Controladora parceira, conforme seus próprios termos (seção 6.2).
 
 ### 7.4. Limites de responsabilidade
 
