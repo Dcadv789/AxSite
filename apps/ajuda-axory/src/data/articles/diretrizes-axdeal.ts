@@ -20,7 +20,7 @@ export const diretrizesAxdealArticles: Article[] = [
     ],
     createdAt: '2026-01-01',
     updatedAt: '2026-06-30',
-    related: ['termos-de-uso-axdeal', 'visao-geral-lgpd'],
+    related: ['termos-de-uso-axdeal', 'politica-de-exclusao-de-dados-axdeal', 'visao-geral-lgpd'],
     body: `
 # Política de Privacidade do AxDeal
 
@@ -156,7 +156,7 @@ Para dúvidas sobre privacidade e proteção de dados, fale com a gente em **con
     ],
     createdAt: '2026-01-01',
     updatedAt: '2026-06-30',
-    related: ['politica-de-privacidade-axdeal', 'visao-geral-lgpd'],
+    related: ['politica-de-privacidade-axdeal', 'politica-de-exclusao-de-dados-axdeal', 'visao-geral-lgpd'],
     body: `
 # Termos de Uso do AxDeal
 
@@ -252,6 +252,76 @@ Estes Termos são regidos pelas **leis da República Federativa do Brasil**. Fic
 ## 15. Contato
 
 Dúvidas sobre estes Termos: **contato@axory.com.br**.
+`,
+  },
+  {
+    id: 'politica-de-exclusao-de-dados-axdeal',
+    slug: 'politica-de-exclusao-de-dados-axdeal',
+    collectionId: 'axdeal-diretrizes',
+    title: 'Política de Exclusão de Dados',
+    description:
+      'Como solicitar a exclusão dos seus dados no AxDeal e o que acontece após o pedido, conforme a LGPD.',
+    keywords: [
+      'exclusão de dados',
+      'excluir dados',
+      'direito ao esquecimento',
+      'eliminação',
+      'lgpd',
+      'exclusão de conta',
+    ],
+    createdAt: '2026-01-01',
+    updatedAt: '2026-06-30',
+    related: [
+      'politica-de-privacidade-axdeal',
+      'termos-de-uso-axdeal',
+      'visao-geral-lgpd',
+    ],
+    body: `
+# Política de Exclusão de Dados do AxDeal
+
+**Última atualização:** 30 de junho de 2026 · **Vigência:** a partir de 1 de janeiro de 2026
+
+Esta política explica **como você pode solicitar a exclusão dos seus dados** tratados pela **Axory Capital Group** no contexto do AxDeal, e o que acontece depois do pedido. Ela complementa a [Política de Privacidade](/a/politica-de-privacidade-axdeal) e se baseia no direito de eliminação previsto no **art. 18 da LGPD (Lei nº 13.709/2018)**.
+
+## 1. Seu direito à exclusão
+
+Você tem o direito de solicitar, a qualquer momento e de forma **gratuita**, a exclusão dos seus dados pessoais tratados pela Axory.
+
+## 2. Como solicitar a exclusão
+
+Envie um e-mail para **contato@axory.com.br** com o assunto **"Exclusão de dados"**, informando:
+
+- Seu nome completo;
+- O e-mail e/ou a conta associada ao AxDeal;
+- Que você deseja a exclusão dos seus dados.
+
+## 3. Confirmação de identidade
+
+Para proteger a sua conta, antes de excluir qualquer coisa nós **confirmamos a sua identidade** e a titularidade do pedido. Isso evita que terceiros solicitem a exclusão dos seus dados sem autorização.
+
+## 4. O que acontece após a confirmação
+
+Assim que o pedido for **confirmado**, excluímos de forma **definitiva e permanente** todos os seus dados pessoais e o conteúdo associado à sua conta. **Não mantemos cópias** nem backups reutilizáveis dos seus dados após a exclusão.
+
+## 5. Prazo
+
+Concluímos a exclusão em prazo razoável a partir da confirmação, dentro dos prazos previstos na LGPD, e avisamos você quando o processo for finalizado.
+
+## 6. A exclusão é irreversível
+
+A exclusão é **permanente e não pode ser desfeita**. Por isso, recomendamos que, antes de solicitar, você **exporte** os dados que quiser guardar — a plataforma permite a exportação.
+
+## 7. Única exceção: dados que a lei obriga a guardar
+
+Por imposição legal, alguns registros podem precisar ser mantidos mesmo após a exclusão — por exemplo, documentos fiscais e contábeis e registros de acesso (art. 15 do Marco Civil da Internet, por 6 meses). Nesses casos, os dados ficam **isolados, sem uso para qualquer outra finalidade**, e são eliminados assim que vence o prazo legal, conforme o **art. 16 da LGPD**.
+
+## 8. Se os seus dados foram inseridos por uma empresa
+
+Se os seus dados estão no AxDeal porque uma **empresa assinante** os cadastrou (por exemplo, você é cliente ou fornecedor dela), essa empresa é a **Controladora** dos dados. Nesse caso, encaminharemos o seu pedido a ela ou orientaremos você a solicitá-lo diretamente, já que a decisão de excluir cabe a ela.
+
+## 9. Contato
+
+Para solicitar a exclusão ou tirar dúvidas: **contato@axory.com.br**.
 `,
   },
 ];
