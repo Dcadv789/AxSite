@@ -6,6 +6,16 @@
     <link rel="icon" type="image/png" href="https://img.axory.com.br/insecure/rs:fit:180:180/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/1782507997191-logo_final.svg@png" />
     <link rel="apple-touch-icon" href="https://img.axory.com.br/insecure/rs:fit:180:180/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/1782507997191-logo_final.svg@png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Aplica o tema salvo antes da hidratação para não piscar (dark/light). -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('ajuda-theme');
+          if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          if (t === 'dark') document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
     <title>Central de Ajuda — Axory</title>
     <meta name="description" content="Tutoriais, guias e respostas para usar os produtos Axory." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
