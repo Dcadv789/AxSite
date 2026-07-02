@@ -1,4 +1,4 @@
-Estes Termos e Condições de Uso (“**Termos**”) regulam a relação comercial e o licenciamento entre a **Axory**, pessoa jurídica inscrita no CNPJ sob o nº 35.617.749/0001-67, com sede em Alfenas/MG (“**Licenciante**”), e a pessoa física ou jurídica que adquire a licença (“**Cliente**” ou “**Licenciado**”).
+Estes Termos e Condições de Uso (“**Termos**”) regulam a relação comercial e o licenciamento entre a **Axory Capital Group** (“Axory”), pessoa jurídica inscrita no CNPJ sob o nº 35.617.749/0001-67, com sede em Alfenas/MG (“**Licenciante**”), e a pessoa física ou jurídica que adquire a licença (“**Cliente**” ou “**Licenciado**”).
 
 O objeto deste instrumento é o uso do software de gestão e automação de atendimentos denominado **AxChat**, fornecido na modalidade **nuvem (SaaS)**.
 
@@ -223,4 +223,4 @@ O Cliente é responsável pela segurança de credenciais e pelo cumprimento da L
 
 12.1. Este contrato rege-se pelas leis da República Federativa do Brasil.
 
-12.2. Fica eleito o foro da Comarca de **Alfenas/MG**, com renúncia a qualquer outro, por mais privilegiado que seja.
+12.2. Fica eleito o foro da Comarca de **São Paulo/SP**, com renúncia a qualquer outro, por mais privilegiado que seja.

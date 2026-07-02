@@ -1,4 +1,4 @@
-A **Axory**, inscrita no CNPJ sob o nº 35.617.749/0001-67, com sede em Alfenas/MG, elaborou este Aviso de Privacidade para explicar como tratamos dados pessoais quando você contrata, acessa ou utiliza o **AxChat**, ou quando visita nossos sites e canais digitais.
+A **Axory Capital Group** (“Axory”), inscrita no CNPJ sob o nº 35.617.749/0001-67, com sede em Alfenas/MG, elaborou este Aviso de Privacidade para explicar como tratamos dados pessoais quando você contrata, acessa ou utiliza o **AxChat**, ou quando visita nossos sites e canais digitais.
 
 O AxChat é um software omnichannel de gestão e automação de atendimento, oferecido em modelo **nuvem (SaaS)**. A Axory disponibiliza a plataforma, a infraestrutura e os serviços correlatos; o Cliente utiliza o sistema para operar seus canais de atendimento e gerenciar os dados dos seus próprios contatos.
 
@@ -137,7 +137,7 @@ Mantemos contratos de tratamento de dados e exigimos padrões de segurança comp
 - **Produtividade e CRM** — e-mail corporativo, gestão de contatos e comunicação com Clientes.
 - **Documentação e atendimento** — central de ajuda, treinamento e ferramentas de suporte.
 
-A lista nominal atualizada de Operadores pode ser solicitada pelo Titular, nos termos do art. 18, VII, da LGPD, pelo e-mail [privacidade@axory.com.br](mailto:privacidade@axory.com.br).
+A lista nominal atualizada de Operadores pode ser solicitada pelo Titular, nos termos do art. 18, VII, da LGPD, pelo e-mail [contato@axory.com.br](mailto:contato@axory.com.br).
 
 ### 6.2. Controladores parceiros
 
@@ -207,7 +207,7 @@ O Cliente é responsável pela configuração adequada de suas integrações, pe
 | **Logs de aplicação** | Mínimo de 6 meses (Marco Civil da Internet). |
 | **Obrigações legais** | Prazos definidos em legislação aplicável (ex.: documentos fiscais). |
 
-A exclusão pode ser solicitada a qualquer momento pelo e-mail [privacidade@axory.com.br](mailto:privacidade@axory.com.br), ressalvadas as hipóteses legais de conservação.
+A exclusão pode ser solicitada a qualquer momento pelo e-mail [contato@axory.com.br](mailto:contato@axory.com.br), ressalvadas as hipóteses legais de conservação.
 
 **Dados dos contatos finais do Cliente:** solicitações de titulares desses dados devem ser dirigidas ao **Cliente**, na qualidade de Controlador.
 
@@ -223,13 +223,13 @@ Adotamos medidas técnicas e organizacionais para proteger dados pessoais contra
 - gestão de credenciais e monitoramento de eventos;
 - contratos de tratamento com Operadores.
 
-Nenhuma operação via internet é 100% segura. Se identificar vulnerabilidade ou suspeita de incidente envolvendo nossos sistemas, entre em contato imediatamente pelo e-mail [privacidade@axory.com.br](mailto:privacidade@axory.com.br).
+Nenhuma operação via internet é 100% segura. Se identificar vulnerabilidade ou suspeita de incidente envolvendo nossos sistemas, entre em contato imediatamente pelo e-mail [contato@axory.com.br](mailto:contato@axory.com.br).
 
 ---
 
 ## 10. Direitos do Titular
 
-A LGPD assegura os seguintes direitos, exercíveis pelo e-mail [privacidade@axory.com.br](mailto:privacidade@axory.com.br):
+A LGPD assegura os seguintes direitos, exercíveis pelo e-mail [contato@axory.com.br](mailto:contato@axory.com.br):
 
 - confirmação e acesso ao tratamento;
 - correção de dados incompletos ou desatualizados;
@@ -281,7 +281,7 @@ Em cumprimento ao art. 41 da LGPD, a Axory mantém Encarregado pela Proteção d
 
 | Canal | Endereço |
 | --- | --- |
-| **Privacidade e LGPD** | [privacidade@axory.com.br](mailto:privacidade@axory.com.br) |
+| **Privacidade e LGPD** | [contato@axory.com.br](mailto:contato@axory.com.br) |
 | **Suporte geral** | [suporte@axory.com.br](mailto:suporte@axory.com.br) |
 
 ---
