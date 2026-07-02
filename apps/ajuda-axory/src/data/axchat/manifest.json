@@ -504,5 +504,27 @@
       "axchat-diretrizes-e-politicas-pre-requisitos-de-instalacao-e-utilizacao",
       "axchat-diretrizes-e-politicas-politica-de-suporte-tecnico"
     ]
+  },
+  {
+    "id": "axchat-politica-de-exclusao-de-dados",
+    "slug": "axchat-politica-de-exclusao-de-dados",
+    "collectionId": "axchat-diretrizes",
+    "title": "Política de Exclusão de Dados",
+    "description": "Como solicitar a exclusão das suas conversas e dados no AxChat — pedido por e-mail e exclusão total, sem retenção.",
+    "keywords": [
+      "exclusão de dados",
+      "excluir dados",
+      "exclusão de conta",
+      "mensagens",
+      "lgpd",
+      "axchat"
+    ],
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-06-30",
+    "related": [
+      "axchat-diretrizes-e-politicas-aviso-de-privacidade",
+      "axchat-diretrizes-e-politicas",
+      "axchat-diretrizes-e-politicas-termos-e-condicoes-gerais-de-uso-e-licenciamento"
+    ]
   }
 ]
