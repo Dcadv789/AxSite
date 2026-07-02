@@ -193,7 +193,7 @@ Detalhamento completo em [Política de Suporte Técnico](/a/axchat-diretrizes-e-
 
 ## 10. Privacidade e proteção de dados (LGPD)
 
-Detalhamento completo no [Aviso de Privacidade](/a/axchat-diretrizes-e-politicas-aviso-de-privacidade).
+Detalhamento completo na [Política de Privacidade](/a/axchat-diretrizes-e-politicas-aviso-de-privacidade).
 
 | Papel | Responsável | Escopo |
 | --- | --- | --- |

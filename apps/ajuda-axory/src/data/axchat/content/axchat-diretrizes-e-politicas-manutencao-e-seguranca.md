@@ -35,7 +35,7 @@ Mesmo em modelo SaaS, o Cliente deve adotar boas práticas na operação diária
 | Credenciais | Proteger logins, senhas e tokens de integração |
 | Operação dos canais | Cumprir políticas do WhatsApp e demais plataformas |
 | Integrações | Configurar e manter ferramentas de terceiros conectadas |
-| Dados dos contatos finais | Cumprir a LGPD perante titulares (ver [Aviso de Privacidade](/a/axchat-diretrizes-e-politicas-aviso-de-privacidade)) |
+| Dados dos contatos finais | Cumprir a LGPD perante titulares (ver [Política de Privacidade](/a/axchat-diretrizes-e-politicas-aviso-de-privacidade)) |
 
 ---
 
@@ -61,7 +61,7 @@ A Axory adota medidas de redundância e proteção na infraestrutura da platafor
 - documentar configurações importantes de integrações e automações;
 - manter cópias de templates, fluxos e materiais de negócio criados fora do AxChat.
 
-Solicitações de exportação ou exclusão de dados cadastrais do Cliente podem ser feitas conforme o [Aviso de Privacidade](/a/axchat-diretrizes-e-politicas-aviso-de-privacidade).
+Solicitações de exportação ou exclusão de dados cadastrais do Cliente podem ser feitas conforme a [Política de Privacidade](/a/axchat-diretrizes-e-politicas-aviso-de-privacidade).
 
 ---
 

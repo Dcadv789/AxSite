@@ -14,4 +14,4 @@ A leitura destes artigos é recomendada para todos os assinantes, pois estabelec
 | [Manutenção e Segurança](/a/axchat-diretrizes-e-politicas-manutencao-e-seguranca) | Atualizações, backups e boas práticas de segurança |
 | [API Oficial vs. Não Oficial](/a/axchat-diretrizes-e-politicas-api-oficial-vs-api-nao-oficial) | Comparativo entre WABA e APIs alternativas |
 | [LID do WhatsApp](/a/axchat-diretrizes-e-politicas-lid-do-whatsapp) | Identificador privado e gestão de contatos duplicados |
-| [Aviso de Privacidade](/a/axchat-diretrizes-e-politicas-aviso-de-privacidade) | Tratamento de dados pessoais e LGPD |
+| [Política de Privacidade](/a/axchat-diretrizes-e-politicas-aviso-de-privacidade) | Tratamento de dados pessoais e LGPD |
