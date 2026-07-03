@@ -1,4 +1,4 @@
-A **Axory Capital Group** (“Axory”), inscrita no CNPJ sob o nº 35.617.749/0001-67, com sede em Alfenas/MG, elaborou este Aviso de Privacidade para explicar como tratamos dados pessoais quando você contrata, acessa ou utiliza o **AxChat**, ou quando visita nossos sites e canais digitais.
+A **Axory Capital Group** (“Axory”), inscrita no CNPJ sob o nº 49.132.263/0001-43, com sede na Rua Teodoro Sampaio, 744, Conjunto 108, Pinheiros, São Paulo/SP, CEP 05406-000, elaborou este Aviso de Privacidade para explicar como tratamos dados pessoais quando você contrata, acessa ou utiliza o **AxChat**, ou quando visita nossos sites e canais digitais.
 
 O AxChat é um software omnichannel de gestão e automação de atendimento, oferecido em modelo **nuvem (SaaS)**. A Axory disponibiliza a plataforma, a infraestrutura e os serviços correlatos; o Cliente utiliza o sistema para operar seus canais de atendimento e gerenciar os dados dos seus próprios contatos.
 
