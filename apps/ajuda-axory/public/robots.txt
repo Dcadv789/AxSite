@@ -1,0 +1,7 @@
+# Central de Ajuda Axory — conteúdo público, leitura liberada.
+# (Atenção: se o domínio estiver atrás da Cloudflare com "AI Scrapers/Content
+#  Signals" ligado, a Cloudflare sobrepõe este arquivo. Ajuste no painel dela.)
+User-agent: *
+Allow: /
+
+Sitemap: https://ajuda.axory.com.br/sitemap.xml
