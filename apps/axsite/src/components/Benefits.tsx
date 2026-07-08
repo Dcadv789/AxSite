@@ -14,40 +14,48 @@ import { cn } from '../lib/utils';
 
 export function Benefits() {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState(t('benefits.items.savings.title'));
+  const [activeTab, setActiveTab] = useState('savings');
   const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({});
 
   const handleCtaClick = () => {
     window.open('https://wa.me/5511994561052?text=Ol%C3%A1,%20quero%20os%20benef%C3%ADcios%20que%20encontrei%20no%20site%20para%20a%20minha%20empresa.%20O%20que%20preciso?', '_blank');
   };
 
+  // `id` é um slug estável (sem espaços) usado como value das tabs, para que os
+  // ids/aria-controls gerados pelo Radix sejam válidos (acessibilidade).
   const benefits = [
     {
+      id: 'savings',
       icon: PiggyBank,
       title: t('benefits.items.savings.title'),
       description: t('benefits.items.savings.description')
     },
     {
+      id: 'control',
       icon: BarChart3,
       title: t('benefits.items.control.title'),
       description: t('benefits.items.control.description')
     },
     {
+      id: 'organization',
       icon: FolderKanban,
       title: t('benefits.items.organization.title'),
       description: t('benefits.items.organization.description')
     },
     {
+      id: 'time',
       icon: Hourglass,
       title: t('benefits.items.time.title'),
       description: t('benefits.items.time.description')
     },
     {
+      id: 'security',
       icon: Shield,
       title: t('benefits.items.security.title'),
       description: t('benefits.items.security.description')
     },
     {
+      id: 'support',
       icon: HeartHandshake,
       title: t('benefits.items.support.title'),
       description: t('benefits.items.support.description')
@@ -143,8 +151,8 @@ export function Benefits() {
               <TabsList className="lg:col-span-4 flex lg:flex-col bg-transparent p-0 h-full">
                 {benefits.map((benefit) => (
                   <TabsTrigger
-                    key={benefit.title}
-                    value={benefit.title}
+                    key={benefit.id}
+                    value={benefit.id}
                     className="group relative w-full flex items-center gap-3 p-4 justify-start text-lg text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors data-[state=active]:bg-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-400 data-[state=active]:shadow-none"
                   >
                     {React.createElement(benefit.icon, {
@@ -165,8 +173,8 @@ export function Benefits() {
                   <AnimatePresence mode="wait">
                     {benefits.map((benefit) => (
                       <TabsContent
-                        key={benefit.title}
-                        value={benefit.title}
+                        key={benefit.id}
+                        value={benefit.id}
                         className="m-0 h-full absolute inset-0 p-8"
                       >
                         <motion.div

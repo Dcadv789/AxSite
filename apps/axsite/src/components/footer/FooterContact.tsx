@@ -6,14 +6,14 @@ export function FooterContact() {
   const { t } = useTranslation();
 
   const socialLinks = [
-    { icon: MessageCircle, href: 'https://wa.me/5511994561052?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20e%20quero%20agendar%20o%20diagn%C3%B3stico%20financeiro%20GRATUITO%20para%20minha%20empresa.' },
+    { icon: MessageCircle, href: 'https://wa.me/5511994561052?text=Ol%C3%A1!%20Vim%20atrav%C3%A9s%20do%20site%20e%20quero%20agendar%20o%20diagn%C3%B3stico%20financeiro%20GRATUITO%20para%20minha%20empresa.', label: 'WhatsApp' },
     { icon: Instagram, href: 'https://www.instagram.com/axory.capital', label: 'Instagram' },
     { icon: Youtube, href: 'https://www.youtube.com/@AxoryCap', label: 'YouTube' },
     { icon: Linkedin, href: 'https://www.linkedin.com/company/axory', label: 'LinkedIn' },
   ];
 
   return (
-    <div className="lg:col-span-4 lg:col-start-9">
+    <div className="lg:col-span-3">
       <div className="ml-auto max-w-md">
         <h3 className="text-xl font-medium mb-6">Contato</h3>
         <div className="space-y-3">
@@ -43,6 +43,7 @@ export function FooterContact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={social.label}
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 <social.icon className="w-7 h-7" />

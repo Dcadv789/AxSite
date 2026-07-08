@@ -1,0 +1,23 @@
+# Axory Capital Group
+
+> A Axory é uma empresa de gestão financeira digital que oferece consultoria empresarial, BPO financeiro, antecipação de recebíveis, soluções digitais e ferramentas próprias (ERP e mais) para empresas de todos os tamanhos.
+
+## Produtos e ferramentas
+
+- [AxDeal — ERP da Axory](https://axdeal.axory.com.br/): sistema de gestão empresarial completo (gestão comercial, financeira, DRE, PDV, notas fiscais e cobrança).
+- [AxChat](https://chat.axory.com.br/): plataforma de atendimento/conversas da Axory.
+- [AxHub](https://hub.axory.com.br/): hub de ferramentas da Axory.
+
+## Serviços
+
+- Consultoria empresarial
+- BPO financeiro
+- Antecipação de recebíveis
+- Soluções digitais e certificado digital
+- Mentoria e treinamentos
+
+## Contato
+
+- Site: [axory.com.br](https://axory.com.br/)
+- Central de ajuda: [ajuda.axory.com.br](https://ajuda.axory.com.br/)
+- E-mail: contato@axory.com.br

@@ -280,6 +280,18 @@ export const ptBR = {
         }
       }
     },
+    axdeal: {
+      badge: 'Nosso ERP',
+      title: 'AXDEAL — o ERP da Axory Capital Group',
+      description: 'O AXDEAL é o sistema de gestão empresarial (ERP) da Axory: uma plataforma completa que reúne gestão comercial, financeira e de resultados em um só lugar. Propostas, pedidos, contratos, PDV, notas fiscais, contas a pagar e receber, boletos, conciliação bancária, DRE gerencial, cobrança automática e muito mais — tudo online e integrado.',
+      cta: 'Acessar o AXDEAL',
+      features: {
+        commercial: 'Gestão comercial: propostas, pedidos, contratos, PDV e notas fiscais',
+        financial: 'Financeiro completo: contas a pagar/receber, boletos e conciliação',
+        results: 'Resultados: DRE gerencial, fluxo de caixa e indicadores',
+        dashboard: 'Painel personalizável e automações do dia a dia'
+      }
+    },
     plans: {
       title: 'PLANOS',
       subtitle: 'Escolha o plano ideal para o seu negócio',
@@ -524,7 +536,8 @@ export const ptBR = {
       slogan: 'Levando sua empresa à outro patamar financeiro',
       links: {
         plans: 'Planos',
-        services: 'Nossos serviços'
+        services: 'Nossos serviços',
+        tools: 'Nossas Ferramentas'
       }
     }
   }

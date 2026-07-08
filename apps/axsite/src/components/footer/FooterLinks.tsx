@@ -6,10 +6,27 @@ interface FooterLinksProps {
   setIsTermsModalOpen: (open: boolean) => void;
 }
 
+interface FooterLink {
+  label: string;
+  href: string;
+  onClick?: (e: React.MouseEvent) => void;
+  title?: string;
+  target?: string;
+  rel?: string;
+}
+
 export function FooterLinks({ setIsPrivacyModalOpen, setIsTermsModalOpen }: FooterLinksProps) {
   const { t } = useTranslation();
 
-  const links = {
+  // Ferramentas/produtos da Axory, cada uma em seu subdomínio. Links reais e estáticos
+  // (sem nofollow, sem redirect) para ajudar o Google a descobrir e indexar os subdomínios.
+  const ferramentas: FooterLink[] = [
+    { label: 'AxDeal', href: 'https://axdeal.axory.com.br/', title: 'AxDeal — ERP da Axory Capital Group', target: '_blank', rel: 'noopener' },
+    { label: 'AxChat', href: 'https://chat.axory.com.br/', title: 'AxChat — Axory', target: '_blank', rel: 'noopener' },
+    { label: 'AxHub', href: 'https://hub.axory.com.br/', title: 'AxHub — Axory', target: '_blank', rel: 'noopener' },
+  ];
+
+  const links: { empresa: FooterLink[]; servicos: FooterLink[] } = {
     empresa: [
       { label: t('footer.about'), href: '#' },
       { label: t('footer.links.plans'), href: '#planos' },
@@ -69,6 +86,9 @@ export function FooterLinks({ setIsPrivacyModalOpen, setIsTermsModalOpen }: Foot
                 <a
                   href={link.href}
                   onClick={link.onClick}
+                  title={link.title}
+                  target={link.target}
+                  rel={link.rel}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   {link.label}
@@ -89,6 +109,28 @@ export function FooterLinks({ setIsPrivacyModalOpen, setIsTermsModalOpen }: Foot
                 <a
                   href={link.href}
                   onClick={link.onClick}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Links - Nossas Ferramentas */}
+      <div className="lg:col-span-2">
+        <div>
+          <h3 className="text-lg font-medium mb-4">{t('footer.links.tools')}</h3>
+          <ul className="space-y-1">
+            {ferramentas.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.href}
+                  title={link.title}
+                  target={link.target}
+                  rel={link.rel}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   {link.label}

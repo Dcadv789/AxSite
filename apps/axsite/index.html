@@ -7,12 +7,38 @@
     <link rel="apple-touch-icon" href="https://img.axory.com.br/insecure/rs:fit:180:180/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/1782507997191-logo_final.svg@png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PX5GHNZK');</script>
+    <!-- Google Tag Manager (carregamento ADIADO p/ performance) -->
+    <!--
+      O GTM só carrega na primeira interação do usuário (scroll/clique/toque/tecla),
+      com fallback no evento `load` + timeout para garantir o disparo mesmo sem
+      interação. O `dataLayer` é inicializado imediatamente, então os eventos
+      enviados antes do GTM subir ficam enfileirados e disparam quando ele carrega
+      (nada é perdido). Isso reduz o Total Blocking Time e o trabalho da thread
+      principal, principalmente no mobile.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      (function (w, d, s, l, i) {
+        var loaded = false;
+        var events = ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'];
+        function loadGTM() {
+          if (loaded) return;
+          loaded = true;
+          events.forEach(function (e) { w.removeEventListener(e, onFirst); });
+          w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        }
+        function onFirst() { loadGTM(); }
+        events.forEach(function (e) { w.addEventListener(e, onFirst, { passive: true }); });
+        // Fallback: usuários que apenas leem sem interagir ainda são contabilizados.
+        w.addEventListener('load', function () { setTimeout(loadGTM, 3500); });
+      })(window, document, 'script', 'dataLayer', 'GTM-PX5GHNZK');
+    </script>
     <!-- End Google Tag Manager -->
     
     <!-- Preconnect para recursos externos -->
@@ -108,6 +134,17 @@
     <div class="loading-spinner"></div>
     
     <div id="root"></div>
+
+    <!--
+      Link estático para SEO/descoberta: como este site é um SPA (React),
+      o conteúdo do #root só existe após o JavaScript rodar. Este link fica
+      no HTML cru servido pelo nginx para o Google descobrir e indexar o ERP
+      AXDEAL mesmo sem renderizar JS. É o MESMO destino exibido, de forma
+      visível, na seção e no rodapé (não é cloaking). Sem nofollow, sem redirect.
+    -->
+    <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">
+      <a href="https://axdeal.axory.com.br/" title="AXDEAL — ERP da Axory Capital Group">AXDEAL — ERP da Axory Capital Group</a>
+    </div>
 
     <!-- Em dev: remove service workers antigos que causam tela branca -->
     <script type="module">

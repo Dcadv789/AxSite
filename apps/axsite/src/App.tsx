@@ -8,7 +8,9 @@ const Scenario = lazy(() => import("./components/Scenario").then(module => ({ de
 const Benefits = lazy(() => import("./components/Benefits").then(module => ({ default: module.Benefits })));
 const Services = lazy(() => import("./components/Services").then(module => ({ default: module.Services })));
 const Plans = lazy(() => import("./components/Plans").then(module => ({ default: module.Plans })));
-const PaymentSolutions = lazy(() => import("./components/PaymentSolutions").then(module => ({ default: module.PaymentSolutions })));
+// AxPay OCULTO TEMPORARIAMENTE (serviço suspenso) — reativar descomentando a linha abaixo e o bloco correspondente no JSX.
+// const PaymentSolutions = lazy(() => import("./components/PaymentSolutions").then(module => ({ default: module.PaymentSolutions })));
+const AxDeal = lazy(() => import("./components/AxDeal").then(module => ({ default: module.AxDeal })));
 const FAQ = lazy(() => import("./components/FAQ").then(module => ({ default: module.FAQ })));
 const Contact = lazy(() => import("./components/Contact").then(module => ({ default: module.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(module => ({ default: module.Footer })));
@@ -52,10 +54,22 @@ function App() {
         <Plans />
       </Suspense>
       
+      {/* ===================================================================
+          AxPay (Soluções de Pagamento) OCULTO TEMPORARIAMENTE.
+          Serviço suspenso. Para REATIVAR: descomente este bloco e também
+          (1) a importação `PaymentSolutions` no topo deste arquivo e
+          (2) o item 'AxPay' no menu (src/components/Navbar.tsx).
+          NÃO EXCLUIR — o código da seção permanece intacto.
+          ===================================================================
       <Suspense fallback={<SectionFallback />}>
         <PaymentSolutions />
       </Suspense>
-      
+      */}
+
+      <Suspense fallback={<SectionFallback />}>
+        <AxDeal />
+      </Suspense>
+
       <Suspense fallback={<SectionFallback />}>
         <FAQ />
       </Suspense>

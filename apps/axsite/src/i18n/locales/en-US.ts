@@ -280,6 +280,18 @@ export const enUS = {
         }
       }
     },
+    axdeal: {
+      badge: 'Our ERP',
+      title: 'AXDEAL — the ERP by Axory Capital Group',
+      description: 'AXDEAL is Axory\'s business management system (ERP): a complete platform that brings sales, finance and results management together in one place. Quotes, orders, contracts, POS, invoices, accounts payable and receivable, bank slips, bank reconciliation, managerial income statement, automated collection and much more — all online and integrated.',
+      cta: 'Access AXDEAL',
+      features: {
+        commercial: 'Sales management: quotes, orders, contracts, POS and invoices',
+        financial: 'Full finance: accounts payable/receivable, bank slips and reconciliation',
+        results: 'Results: managerial income statement, cash flow and KPIs',
+        dashboard: 'Customizable dashboard and day-to-day automations'
+      }
+    },
     plans: {
       title: 'PLANS',
       subtitle: 'Choose the ideal plan for your business',
@@ -524,7 +536,8 @@ export const enUS = {
       slogan: 'Taking your company to the next financial level',
       links: {
         plans: 'Plans',
-        services: 'Our services'
+        services: 'Our services',
+        tools: 'Our Tools'
       }
     }
   }

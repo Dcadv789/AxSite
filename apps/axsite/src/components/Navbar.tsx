@@ -31,7 +31,8 @@ export function Navbar() {
     { name: t('nav.benefits'), url: '#beneficios', icon: Gift },
     { name: t('nav.services'), url: '#servicos', icon: Sparkles },
     { name: t('nav.plans'), url: '#planos', icon: CreditCard },
-    { name: 'AxPay', url: '#solucoes-pagamento', icon: CreditCard },
+    // AxPay OCULTO TEMPORARIAMENTE (serviço suspenso) — reativar descomentando a linha abaixo:
+    // { name: 'AxPay', url: '#solucoes-pagamento', icon: CreditCard },
     { name: t('nav.faq'), url: '#faq', icon: HelpCircle },
   ];
 
