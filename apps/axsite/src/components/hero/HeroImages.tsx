@@ -4,9 +4,7 @@ import { motion } from 'framer-motion';
 export function HeroImages() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -30, scale: 0.9 }}
-      animate={{ opacity: 1, x: 0, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.4 }}
+      initial={false}
       className="relative w-full contain-layout"
     >
       {/* Efeito de luz otimizado */}

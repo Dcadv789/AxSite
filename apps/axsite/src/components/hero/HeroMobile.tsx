@@ -23,20 +23,14 @@ export function HeroMobile() {
           </h1>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-        >
+        <motion.div initial={false}>
           <p className="text-lg text-gray-200 dark:text-gray-300 text-justify leading-relaxed px-2">
             {t('hero.subtitle')}
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
+          initial={false}
           className="relative contain-paint"
         >
           {/* Efeito de luz mobile otimizado */}
@@ -85,27 +79,15 @@ export function HeroMobile() {
           </picture>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.8 }}
-        >
+        <motion.div initial={false}>
           <HeroSocialLinks isMobile />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.0 }}
-        >
+        <motion.div initial={false}>
           <HeroStats isMobile />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.2 }}
-        >
+        <motion.div initial={false}>
           <button
             onClick={handleCtaClick}
             className="w-full bg-white hover:bg-gray-100 py-4 px-8 rounded-full text-[#0131FF] dark:text-gray-800 text-lg font-semibold transition-all duration-300 hover:shadow-lg shadow-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
