@@ -150,8 +150,9 @@ export function ServicesMobile() {
                           <Icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                         </div>
                         <div className="flex items-center gap-4 w-full justify-between">
-                          <button 
+                          <button
                             onClick={previousService}
+                            aria-label={t('a11y.previous')}
                             className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                           >
                             <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-300" />
@@ -160,8 +161,9 @@ export function ServicesMobile() {
                             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{service.title}</h3>
                             <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{service.description}</p>
                           </div>
-                          <button 
+                          <button
                             onClick={nextService}
+                            aria-label={t('a11y.next')}
                             className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                           >
                             <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-300" />
@@ -192,15 +194,21 @@ export function ServicesMobile() {
           </AnimatePresence>
 
           {/* Indicadores de página - SEM TAG DUPLICADA */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-1 mt-6">
             {services.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentServiceIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentServiceIndex ? 'bg-blue-600 dark:bg-blue-400 w-4' : 'bg-gray-400 dark:bg-gray-600'
-                }`}
-              />
+                aria-label={`${t('a11y.goToItem')} ${index + 1}`}
+                aria-current={index === currentServiceIndex}
+                className="flex items-center justify-center w-6 h-6"
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all duration-300 ${
+                    index === currentServiceIndex ? 'bg-blue-600 dark:bg-blue-400 w-4' : 'bg-gray-400 dark:bg-gray-600 w-2'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>

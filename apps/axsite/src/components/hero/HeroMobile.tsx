@@ -12,18 +12,12 @@ export function HeroMobile() {
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
+    <motion.div
+      initial={false}
       className="md:hidden px-4 pt-12 pb-6 contain-layout"
     >
       <div className="text-center space-y-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
+        <motion.div initial={false}>
           <h1 className="text-4xl font-medium tracking-tight text-white leading-tight mb-4">
             {t('hero.title')}
           </h1>

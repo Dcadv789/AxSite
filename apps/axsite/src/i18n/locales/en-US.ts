@@ -10,6 +10,11 @@ export const enUS = {
       faq: 'FAQ',
       schedule: 'Schedule a Meeting'
     },
+    a11y: {
+      previous: 'Previous',
+      next: 'Next',
+      goToItem: 'Go to item'
+    },
     hero: {
       title: 'Your digital, efficient and success-driven financial management',
       subtitle: 'The future of your finances starts here: innovation, strategy and growth. Get a free financial diagnosis and discover how to evolve!',

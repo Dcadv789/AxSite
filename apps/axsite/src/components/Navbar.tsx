@@ -8,8 +8,8 @@ import { GTMEvents, gtmEvent } from '../utils/gtm';
 
 // Logo da Axory servida pelo proxy de imagens (img.axory.com.br).
 // Dark mode usa a versão branca; light mode usa a versão azul/cinza.
-const LOGO_DARK = 'https://img.axory.com.br/insecure/rs:fit:1440:1080/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Logo_axory_branco.svg@webp';
-const LOGO_LIGHT = 'https://img.axory.com.br/insecure/rs:fit:1440:1080/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Ativo_35_-_Logo_Azul_Cinza_feb1hr%20(1).svg@webp';
+const LOGO_DARK = 'https://img.axory.com.br/insecure/rs:fit:262:64/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Logo_axory_branco.svg@webp';
+const LOGO_LIGHT = 'https://img.axory.com.br/insecure/rs:fit:262:64/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Ativo_35_-_Logo_Azul_Cinza_feb1hr%20(1).svg@webp';
 
 interface NavItem {
   name: string;
@@ -170,7 +170,7 @@ export function Navbar() {
                   src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
                   alt="Logo Axory"
                   className="h-8 w-auto hover:opacity-80 transition-opacity"
-                  width={32}
+                  width={131}
                   height={32}
                   loading="eager"
                 />
@@ -224,7 +224,7 @@ export function Navbar() {
                   src={isDarkMode ? LOGO_DARK : LOGO_LIGHT}
                   alt="Logo Axory"
                   className="h-8 w-auto hover:opacity-80 transition-opacity"
-                  width={32}
+                  width={131}
                   height={32}
                   loading="eager"
                 />

@@ -10,6 +10,11 @@ export const ptBR = {
       faq: 'FAQ',
       schedule: 'Agende uma Reunião'
     },
+    a11y: {
+      previous: 'Anterior',
+      next: 'Próximo',
+      goToItem: 'Ir para o item'
+    },
     hero: {
       title: 'Seu financeiro digital, eficiente e projetado para o sucesso',
       subtitle: 'O futuro do seu financeiro começa aqui: inovação, estratégia e crescimento. Faça um diagnóstico financeiro gratuito e descubra como evoluir!',

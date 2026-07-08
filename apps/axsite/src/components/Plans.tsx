@@ -254,27 +254,35 @@ export function Plans() {
 
           <button
             onClick={previousPlan}
+            aria-label={t('a11y.previous')}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center z-10 hover:bg-gray-50 transition-colors"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600" />
           </button>
           <button
             onClick={nextPlan}
+            aria-label={t('a11y.next')}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center z-10 hover:bg-gray-50 transition-colors"
           >
             <ChevronRight className="w-6 h-6 text-gray-600" />
           </button>
 
           {/* Indicadores de página */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-1 mt-6">
             {plans.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentPlanIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentPlanIndex ? 'bg-blue-600 w-4' : 'bg-gray-400'
-                }`}
-              />
+                aria-label={`${t('a11y.goToItem')} ${index + 1}`}
+                aria-current={index === currentPlanIndex}
+                className="flex items-center justify-center w-6 h-6"
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all duration-300 ${
+                    index === currentPlanIndex ? 'bg-blue-600 w-4' : 'bg-gray-400 w-2'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
