@@ -1,33 +1,23 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
+import { Challenges } from "./components/Challenges";
+import { Scenario } from "./components/Scenario";
+import { Benefits } from "./components/Benefits";
+import { Services } from "./components/Services";
+import { Plans } from "./components/Plans";
+// AxPay OCULTO TEMPORARIAMENTE (serviço suspenso) — reativar descomentando a
+// linha abaixo e o <PaymentSolutions /> no JSX, e o item 'AxPay' no Navbar.tsx.
+// import { PaymentSolutions } from "./components/PaymentSolutions";
+import { AxDeal } from "./components/AxDeal";
+import { FAQ } from "./components/FAQ";
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 import i18n from './i18n';
 
-// Lazy loading de componentes não críticos
-const Challenges = lazy(() => import("./components/Challenges").then(module => ({ default: module.Challenges })));
-const Scenario = lazy(() => import("./components/Scenario").then(module => ({ default: module.Scenario })));
-const Benefits = lazy(() => import("./components/Benefits").then(module => ({ default: module.Benefits })));
-const Services = lazy(() => import("./components/Services").then(module => ({ default: module.Services })));
-const Plans = lazy(() => import("./components/Plans").then(module => ({ default: module.Plans })));
-// AxPay OCULTO TEMPORARIAMENTE (serviço suspenso) — reativar descomentando a linha abaixo e o bloco correspondente no JSX.
-// const PaymentSolutions = lazy(() => import("./components/PaymentSolutions").then(module => ({ default: module.PaymentSolutions })));
-const AxDeal = lazy(() => import("./components/AxDeal").then(module => ({ default: module.AxDeal })));
-const FAQ = lazy(() => import("./components/FAQ").then(module => ({ default: module.FAQ })));
-const Contact = lazy(() => import("./components/Contact").then(module => ({ default: module.Contact })));
-const Footer = lazy(() => import("./components/Footer").then(module => ({ default: module.Footer })));
-
-// Loading fallback otimizado
-const SectionFallback = () => (
-  <div className="section min-h-[200px] flex items-center justify-center bg-gray-50 dark:bg-gray-800">
-    <div className="animate-pulse flex space-x-4">
-      <div className="rounded-full bg-gray-300 dark:bg-gray-600 h-10 w-10"></div>
-      <div className="flex-1 space-y-2 py-1">
-        <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-3/4"></div>
-        <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-1/2"></div>
-      </div>
-    </div>
-  </div>
-);
+// Importação direta (sem lazy/Suspense): com SSG, o conteúdo é pré-renderizado
+// no build; usar lazy fazia as seções "suspenderem" no servidor e gerava erros
+// de hidratação (React #419). Direto = HTML completo + sem erro no console.
 
 function App() {
   // Detecção de idioma APÓS a hidratação (efeito só roda no cliente, depois do
@@ -49,54 +39,17 @@ function App() {
     <div className="min-h-screen bg-[#FAFAFA] dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       <Hero />
-      
-      <Suspense fallback={<SectionFallback />}>
-        <Challenges />
-      </Suspense>
-      
-      <Suspense fallback={<SectionFallback />}>
-        <Scenario />
-      </Suspense>
-      
-      <Suspense fallback={<SectionFallback />}>
-        <Benefits />
-      </Suspense>
-      
-      <Suspense fallback={<SectionFallback />}>
-        <Services />
-      </Suspense>
-      
-      <Suspense fallback={<SectionFallback />}>
-        <Plans />
-      </Suspense>
-      
-      {/* ===================================================================
-          AxPay (Soluções de Pagamento) OCULTO TEMPORARIAMENTE.
-          Serviço suspenso. Para REATIVAR: descomente este bloco e também
-          (1) a importação `PaymentSolutions` no topo deste arquivo e
-          (2) o item 'AxPay' no menu (src/components/Navbar.tsx).
-          NÃO EXCLUIR — o código da seção permanece intacto.
-          ===================================================================
-      <Suspense fallback={<SectionFallback />}>
-        <PaymentSolutions />
-      </Suspense>
-      */}
-
-      <Suspense fallback={<SectionFallback />}>
-        <AxDeal />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <FAQ />
-      </Suspense>
-      
-      <Suspense fallback={<SectionFallback />}>
-        <Contact />
-      </Suspense>
-      
-      <Suspense fallback={<SectionFallback />}>
-        <Footer />
-      </Suspense>
+      <Challenges />
+      <Scenario />
+      <Benefits />
+      <Services />
+      <Plans />
+      {/* AxPay (Soluções de Pagamento) OCULTO TEMPORARIAMENTE — ver imports acima.
+          Para reativar, coloque aqui: <PaymentSolutions /> */}
+      <AxDeal />
+      <FAQ />
+      <Contact />
+      <Footer />
     </div>
   );
 }
