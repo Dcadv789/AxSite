@@ -1,8 +1,8 @@
 // Service Worker ultra-otimizado para PageSpeed 100
-const CACHE_NAME = 'axory-v4';
-const STATIC_CACHE = 'axory-static-v4';
-const DYNAMIC_CACHE = 'axory-dynamic-v4';
-const IMAGE_CACHE = 'axory-images-v4';
+const CACHE_NAME = 'axory-v5';
+const STATIC_CACHE = 'axory-static-v5';
+const DYNAMIC_CACHE = 'axory-dynamic-v5';
+const IMAGE_CACHE = 'axory-images-v5';
 
 // Recursos críticos para cache imediato
 const criticalResources = [
@@ -14,10 +14,10 @@ const criticalResources = [
 
 // Recursos de imagem para cache otimizado
 const imageResources = [
-  'https://img.axory.com.br/insecure/rs:fill:800:600/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558363210-axsiteescuro.png@webp',
-  'https://img.axory.com.br/insecure/rs:fill:400:300/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558363210-axsiteescuro.png@webp',
-  'https://img.axory.com.br/insecure/rs:fill:800:600/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558454045-axsiteclaro2redondo.png@webp',
-  'https://img.axory.com.br/insecure/rs:fill:400:300/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558454045-axsiteclaro2redondo.png@webp'
+  '/hero/light-800.webp',
+  '/hero/light-400.webp',
+  '/hero/dark-800.webp',
+  '/hero/dark-400.webp'
 ];
 
 // Install event otimizado
@@ -47,7 +47,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames
           .filter(cacheName => 
-            !cacheName.includes('v4') && 
+            !cacheName.includes('v5') && 
             (cacheName.includes('axory') || cacheName.includes('static') || cacheName.includes('dynamic') || cacheName.includes('images'))
           )
           .map(cacheName => caches.delete(cacheName))
@@ -153,7 +153,7 @@ self.addEventListener('message', (event) => {
       caches.keys().then(cacheNames => {
         return Promise.all(
           cacheNames
-            .filter(cacheName => !cacheName.includes('v4'))
+            .filter(cacheName => !cacheName.includes('v5'))
             .map(cacheName => caches.delete(cacheName))
         );
       })

@@ -12,17 +12,17 @@ export function HeroImages() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/20 rounded-full blur-3xl will-change-transform"></div>
       </div>
 
-      {/* Imagem LCP otimizada - modo light COM BORDAS ARREDONDADAS */}
+      {/* Imagem LCP servida pelo MESMO domínio (public/hero) para o navegador
+          reaproveitar a conexão do HTML e o LCP não pagar a abertura de conexão
+          com outro domínio. */}
       <picture>
         <source
-          srcSet="https://img.axory.com.br/insecure/rs:fill:800:600/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558363210-axsiteescuro.png@webp 800w,
-                  https://img.axory.com.br/insecure/rs:fill:600:450/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558363210-axsiteescuro.png@webp 600w,
-                  https://img.axory.com.br/insecure/rs:fill:400:300/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558363210-axsiteescuro.png@webp 400w"
+          srcSet="/hero/light-800.webp 800w, /hero/light-600.webp 600w, /hero/light-400.webp 400w"
           sizes="(max-width: 768px) 400px, (max-width: 1024px) 600px, 800px"
           type="image/webp"
         />
         <img
-          src="https://img.axory.com.br/insecure/rs:fill:800:600/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558363210-axsiteescuro.png@png"
+          src="/hero/light-800.webp"
           alt="Banner ilustrativo da Axory mostrando gestão financeira digital"
           className="w-full h-auto relative z-10 block dark:hidden hero-image rounded-3xl"
           width={800}
@@ -36,14 +36,12 @@ export function HeroImages() {
       {/* Imagem modo dark COM BORDAS ARREDONDADAS */}
       <picture>
         <source
-          srcSet="https://img.axory.com.br/insecure/rs:fill:800:600/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558454045-axsiteclaro2redondo.png@webp 800w,
-                  https://img.axory.com.br/insecure/rs:fill:600:450/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558454045-axsiteclaro2redondo.png@webp 600w,
-                  https://img.axory.com.br/insecure/rs:fill:400:300/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558454045-axsiteclaro2redondo.png@webp 400w"
+          srcSet="/hero/dark-800.webp 800w, /hero/dark-600.webp 600w, /hero/dark-400.webp 400w"
           sizes="(max-width: 768px) 400px, (max-width: 1024px) 600px, 800px"
           type="image/webp"
         />
         <img
-          src="https://img.axory.com.br/insecure/rs:fill:800:600/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558454045-axsiteclaro2redondo.png@png"
+          src="/hero/dark-800.webp"
           alt="Banner ilustrativo da Axory mostrando gestão financeira digital"
           className="w-full h-auto relative z-10 hidden dark:block hero-image rounded-3xl"
           width={800}
