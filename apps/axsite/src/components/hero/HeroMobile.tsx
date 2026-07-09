@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { HeroSocialLinks } from './HeroSocialLinks';
 import { HeroStats } from './HeroStats';
 
@@ -12,35 +11,29 @@ export function HeroMobile() {
   };
 
   return (
-    <motion.div
-      initial={false}
-      className="md:hidden px-4 pt-12 pb-6 contain-layout"
-    >
+    <div className="md:hidden px-4 pt-12 pb-6 contain-layout">
       <div className="text-center space-y-8">
-        <motion.div initial={false}>
+        <div>
           <h1 className="text-4xl font-medium tracking-tight text-white leading-tight mb-4">
             {t('hero.title')}
           </h1>
-        </motion.div>
+        </div>
 
-        <motion.div initial={false}>
+        <div>
           <p className="text-lg text-gray-200 dark:text-gray-300 text-justify leading-relaxed px-2">
             {t('hero.subtitle')}
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={false}
-          className="relative contain-paint"
-        >
+        <div className="relative contain-paint">
           {/* Efeito de luz mobile otimizado */}
           <div className="absolute inset-0 -inset-x-12 -inset-y-12 opacity-40">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-white/20 rounded-full blur-3xl will-change-transform"></div>
           </div>
-          
+
           {/* Imagem LCP mobile otimizada - modo light COM BORDAS ARREDONDADAS */}
           <picture>
-            <source 
+            <source
               srcSet="/hero/light-400.webp 400w, /hero/light-300.webp 300w"
               sizes="(max-width: 480px) 300px, 400px"
               type="image/webp"
@@ -56,10 +49,10 @@ export function HeroMobile() {
               fetchPriority="high"
             />
           </picture>
-          
+
           {/* Imagem modo dark mobile COM BORDAS ARREDONDADAS */}
           <picture>
-            <source 
+            <source
               srcSet="/hero/dark-400.webp 400w, /hero/dark-300.webp 300w"
               sizes="(max-width: 480px) 300px, 400px"
               type="image/webp"
@@ -74,17 +67,17 @@ export function HeroMobile() {
               decoding="async"
             />
           </picture>
-        </motion.div>
+        </div>
 
-        <motion.div initial={false}>
+        <div>
           <HeroSocialLinks isMobile />
-        </motion.div>
+        </div>
 
-        <motion.div initial={false}>
+        <div>
           <HeroStats isMobile />
-        </motion.div>
+        </div>
 
-        <motion.div initial={false}>
+        <div>
           <button
             onClick={handleCtaClick}
             className="w-full bg-white hover:bg-gray-100 py-4 px-8 rounded-full text-[#0131FF] dark:text-gray-800 text-lg font-semibold transition-all duration-300 hover:shadow-lg shadow-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
@@ -92,8 +85,8 @@ export function HeroMobile() {
           >
             {t('hero.cta')}
           </button>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

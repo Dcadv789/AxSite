@@ -1,12 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 export function HeroImages() {
   return (
-    <motion.div
-      initial={false}
-      className="relative w-full contain-layout"
-    >
+    <div className="relative w-full contain-layout">
       {/* Efeito de luz otimizado */}
       <div className="absolute inset-0 -inset-x-20 -inset-y-20 opacity-60">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/20 rounded-full blur-3xl will-change-transform"></div>
@@ -49,6 +45,6 @@ export function HeroImages() {
           decoding="async"
         />
       </picture>
-    </motion.div>
+    </div>
   );
 }

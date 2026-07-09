@@ -31,7 +31,12 @@
       window.dataLayer = window.dataLayer || [];
       (function (w, d, s, l, i) {
         var loaded = false;
-        var events = ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'];
+        // Apenas interações DELIBERADAS (toque/clique/tecla). Não usar 'scroll'
+        // nem 'mousemove': o navegador/headless dispara esses eventos sozinho
+        // (ex.: captura de tela), o que carregaria o GTM no load e estouraria o
+        // TBT. Usuários reais que tocam/clicam seguem rastreados; visitas sem
+        // interação são contadas pelo Umami.
+        var events = ['pointerdown', 'touchstart', 'click', 'keydown'];
         function loadGTM() {
           if (loaded) return;
           loaded = true;
