@@ -1,5 +1,13 @@
 import { defineConfig } from 'vite';
+import { fileURLToPath } from 'node:url';
 import react from '@vitejs/plugin-react';
+import { vitePrerenderPlugin } from 'vite-prerender-plugin';
+
+// Shim mínimo de `document` para a pré-renderização (Node). Algumas libs
+// (framer-motion/lucide) podem tocar em `document` ao serem avaliadas. Injetado
+// no topo de cada chunk; no browser é no-op. NÃO define `window` — assim as
+// guardas de SSR (typeof window === 'undefined') continuam funcionando.
+const DOCUMENT_SHIM = `if(typeof document==='undefined'){var __d=function(){return{style:{},setAttribute:function(){},removeAttribute:function(){},appendChild:function(){},removeChild:function(){},getAttribute:function(){return null},addEventListener:function(){},removeEventListener:function(){},classList:{add:function(){},remove:function(){}}}};globalThis.document={createElement:__d,createElementNS:__d,createTextNode:function(){return{}},createComment:function(){return{}},documentElement:__d(),head:__d(),body:__d(),getElementById:function(){return null},querySelector:function(){return null},querySelectorAll:function(){return[]},addEventListener:function(){},removeEventListener:function(){}};}`;
 
 export default defineConfig({
   plugins: [
@@ -13,6 +21,12 @@ export default defineConfig({
       }
     })
     ,
+    // Pré-renderização estática (SSG): gera o HTML já montado dentro do #root no
+    // build; o app hidrata no cliente. Reduz drasticamente LCP/FCP.
+    vitePrerenderPlugin({
+      renderTarget: '#root',
+      prerenderScript: fileURLToPath(new URL('./src/prerender.tsx', import.meta.url)),
+    }),
     {
       name: 'clear-sw-dev',
       configureServer(server) {
@@ -46,6 +60,9 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
+        // Injeta o shim de `document` no topo de cada chunk (necessário na
+        // pré-renderização em Node).
+        intro: DOCUMENT_SHIM,
         manualChunks: {
           // Chunks otimizados para cache
           vendor: ['react', 'react-dom'],

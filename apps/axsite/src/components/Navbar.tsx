@@ -141,7 +141,13 @@ export function Navbar() {
     
     // Track language change
     GTMEvents.languageChange(currentLang, newLang);
-    
+
+    try {
+      localStorage.setItem('lang', newLang);
+    } catch {
+      // localStorage indisponível — segue sem persistir.
+    }
+
     i18n.changeLanguage(newLang);
   };
 

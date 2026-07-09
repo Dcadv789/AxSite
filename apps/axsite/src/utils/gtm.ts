@@ -6,8 +6,10 @@ declare global {
   }
 }
 
-// Inicializar dataLayer se não existir
-window.dataLayer = window.dataLayer || [];
+// Inicializar dataLayer se não existir (guarda de SSR: no Node não há `window`).
+if (typeof window !== 'undefined') {
+  window.dataLayer = window.dataLayer || [];
+}
 
 // Função para enviar eventos personalizados para o GTM
 export function gtmEvent(eventName: string, parameters: Record<string, any> = {}) {
