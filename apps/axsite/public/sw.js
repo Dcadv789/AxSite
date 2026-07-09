@@ -1,23 +1,23 @@
 // Service Worker ultra-otimizado para PageSpeed 100
-const CACHE_NAME = 'axory-v3';
-const STATIC_CACHE = 'axory-static-v3';
-const DYNAMIC_CACHE = 'axory-dynamic-v3';
-const IMAGE_CACHE = 'axory-images-v3';
+const CACHE_NAME = 'axory-v4';
+const STATIC_CACHE = 'axory-static-v4';
+const DYNAMIC_CACHE = 'axory-dynamic-v4';
+const IMAGE_CACHE = 'axory-images-v4';
 
 // Recursos críticos para cache imediato
 const criticalResources = [
   '/',
   '/src/main.tsx',
   '/src/index.css',
-  'https://res.cloudinary.com/ducd9j4tx/image/upload/v1751041685/Ativo_25_n6x26v.svg'
+  'https://img.axory.com.br/insecure/rs:fit:262:64/q:95/plain/https://storage.axory.com.br/imagens-saas-sites/Ativo_35_-_Logo_Azul_Cinza_feb1hr%20(1).svg@webp'
 ];
 
 // Recursos de imagem para cache otimizado
 const imageResources = [
-  'https://res.cloudinary.com/ducd9j4tx/image/upload/f_webp,q_auto:best,w_800,h_600,c_fill/v1751258417/axsiteescuro2redondoreduzido_nb0wdo.webp',
-  'https://res.cloudinary.com/ducd9j4tx/image/upload/f_webp,q_auto:best,w_400,h_300,c_fill/v1751258417/axsiteescuro2redondoreduzido_nb0wdo.webp',
-  'https://res.cloudinary.com/ducd9j4tx/image/upload/f_webp,q_auto:best,w_800,h_600,c_fill/v1751258131/axsiteclaro2redondoreduzido_apfqbv.webp',
-  'https://res.cloudinary.com/ducd9j4tx/image/upload/f_webp,q_auto:best,w_400,h_300,c_fill/v1751258131/axsiteclaro2redondoreduzido_apfqbv.webp'
+  'https://img.axory.com.br/insecure/rs:fill:800:600/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558363210-axsiteescuro.png@webp',
+  'https://img.axory.com.br/insecure/rs:fill:400:300/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558363210-axsiteescuro.png@webp',
+  'https://img.axory.com.br/insecure/rs:fill:800:600/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558454045-axsiteclaro2redondo.png@webp',
+  'https://img.axory.com.br/insecure/rs:fill:400:300/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558454045-axsiteclaro2redondo.png@webp'
 ];
 
 // Install event otimizado
@@ -47,7 +47,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames
           .filter(cacheName => 
-            !cacheName.includes('v3') && 
+            !cacheName.includes('v4') && 
             (cacheName.includes('axory') || cacheName.includes('static') || cacheName.includes('dynamic') || cacheName.includes('images'))
           )
           .map(cacheName => caches.delete(cacheName))
@@ -79,8 +79,8 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Estratégia cache-first para imagens do Cloudinary
-  if (url.hostname === 'res.cloudinary.com') {
+  // Estratégia cache-first para imagens (proxy img.axory.com.br)
+  if (url.hostname === 'img.axory.com.br') {
     event.respondWith(
       caches.match(request).then(response => {
         if (response) return response;
@@ -153,7 +153,7 @@ self.addEventListener('message', (event) => {
       caches.keys().then(cacheNames => {
         return Promise.all(
           cacheNames
-            .filter(cacheName => !cacheName.includes('v3'))
+            .filter(cacheName => !cacheName.includes('v4'))
             .map(cacheName => caches.delete(cacheName))
         );
       })

@@ -22,11 +22,11 @@ export function PaymentMachine({ isMobile = false }: PaymentMachineProps) {
       
       <picture>
         <source 
-          srcSet="https://res.cloudinary.com/ducd9j4tx/image/upload/f_webp,q_auto,w_280/v1751212557/maquininha1_qseydl.webp" 
+          srcSet="https://img.axory.com.br/insecure/rs:fill:280:350/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558818169-maquininha1_qseydl.png@webp"
           type="image/webp"
         />
         <img
-          src="https://res.cloudinary.com/ducd9j4tx/image/upload/q_auto,w_280/v1751212557/maquininha1_qseydl.png"
+          src="https://img.axory.com.br/insecure/rs:fill:280:350/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558818169-maquininha1_qseydl.png@png"
           alt="Máquina de cartão AxPay - solução de pagamento moderna e eficiente"
           className={`w-full ${isMobile ? 'max-w-[200px]' : 'max-w-[280px]'} h-auto relative z-10 drop-shadow-2xl`}
           width={280}

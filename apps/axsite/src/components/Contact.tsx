@@ -365,11 +365,11 @@ export function Contact() {
               {/* Imagem para modo light - otimizada */}
               <picture>
                 <source 
-                  srcSet="https://res.cloudinary.com/ducd9j4tx/image/upload/f_webp,q_auto,w_600/v1751423571/People_talking_in_office_a63kud.webp" 
+                  srcSet="https://img.axory.com.br/insecure/rs:fill:600:400/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558809614-people_talking_in_office_a63kud.png@webp"
                   type="image/webp"
                 />
                 <img
-                  src="https://res.cloudinary.com/ducd9j4tx/image/upload/q_auto,w_600/v1751423571/People_talking_in_office_a63kud.png"
+                  src="https://img.axory.com.br/insecure/rs:fill:600:400/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558809614-people_talking_in_office_a63kud.png@png"
                   alt={t('contact.officeImage')}
                   className="w-full h-auto block dark:hidden"
                   width={600}
@@ -382,11 +382,11 @@ export function Contact() {
               {/* Imagem para modo dark - otimizada */}
               <picture>
                 <source 
-                  srcSet="https://res.cloudinary.com/ducd9j4tx/image/upload/f_webp,q_auto,w_600/v1751423571/Customer_Service_Executive_lrrrzp.webp" 
+                  srcSet="https://img.axory.com.br/insecure/rs:fill:600:400/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558814479-customer_service_executive_lrrrzp.png@webp"
                   type="image/webp"
                 />
                 <img
-                  src="https://res.cloudinary.com/ducd9j4tx/image/upload/q_auto,w_600/v1751423571/Customer_Service_Executive_lrrrzp.png"
+                  src="https://img.axory.com.br/insecure/rs:fill:600:400/q:80/plain/https://storage.axory.com.br/imagens-saas-sites/1783558814479-customer_service_executive_lrrrzp.png@png"
                   alt={t('contact.officeImage')}
                   className="w-full h-auto hidden dark:block"
                   width={600}
