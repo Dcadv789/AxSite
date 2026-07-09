@@ -52,7 +52,7 @@ export function HeroMobile() {
               width={400}
               height={300}
               loading="eager"
-              decoding="sync"
+              decoding="async"
               fetchPriority="high"
             />
           </picture>

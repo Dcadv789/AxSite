@@ -19,11 +19,24 @@ const app = (
   </StrictMode>
 );
 
-// Se o HTML já veio pré-renderizado (build/SSG), hidrata; senão (dev), monta do zero.
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, app);
+// Monta a aplicação. Se o HTML já veio pré-renderizado (build/SSG), hidrata;
+// senão (dev), monta do zero.
+const mount = () => {
+  if (rootElement.hasChildNodes()) {
+    hydrateRoot(rootElement, app);
+  } else {
+    createRoot(rootElement).render(app);
+  }
+};
+
+// Em produção (SSG) o conteúdo já está visível a partir do HTML estático, então
+// ADIAMOS a hidratação para o navegador conseguir pintar o LCP (hero) antes de o
+// React ocupar a thread principal com o trabalho pesado de hidratação. Roda
+// quando a thread fica ociosa (ou em no máximo 1.5s). Em dev monta na hora.
+if (rootElement.hasChildNodes() && typeof requestIdleCallback === 'function') {
+  requestIdleCallback(mount, { timeout: 1500 });
 } else {
-  createRoot(rootElement).render(app);
+  mount();
 }
 
 // A detecção/troca de idioma acontece em um useEffect dentro de <App> (roda

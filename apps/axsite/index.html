@@ -18,14 +18,14 @@
       })();
     </script>
 
-    <!-- Google Tag Manager (carregamento ADIADO p/ performance) -->
+    <!-- Google Tag Manager (carregamento SÓ na 1ª interação p/ performance) -->
     <!--
-      O GTM só carrega na primeira interação do usuário (scroll/clique/toque/tecla),
-      com fallback no evento `load` + timeout para garantir o disparo mesmo sem
-      interação. O `dataLayer` é inicializado imediatamente, então os eventos
-      enviados antes do GTM subir ficam enfileirados e disparam quando ele carrega
-      (nada é perdido). Isso reduz o Total Blocking Time e o trabalho da thread
-      principal, principalmente no mobile.
+      O GTM (script pesado de terceiro) só carrega na PRIMEIRA interação do
+      usuário (scroll/clique/toque/tecla). O `dataLayer` é inicializado na hora,
+      então eventos enviados antes ficam enfileirados e disparam quando o GTM
+      sobe (nada é perdido). Sem carregamento por timer: mantém a thread
+      principal livre no carregamento inicial (melhora LCP/TBT). Usuários reais
+      quase sempre interagem; páginas apenas "lidas" seguem contadas pelo Umami.
     -->
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -46,8 +46,6 @@
         }
         function onFirst() { loadGTM(); }
         events.forEach(function (e) { w.addEventListener(e, onFirst, { passive: true }); });
-        // Fallback: usuários que apenas leem sem interagir ainda são contabilizados.
-        w.addEventListener('load', function () { setTimeout(loadGTM, 3500); });
       })(window, document, 'script', 'dataLayer', 'GTM-PX5GHNZK');
     </script>
     <!-- End Google Tag Manager -->
