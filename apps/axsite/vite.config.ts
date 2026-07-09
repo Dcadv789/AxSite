@@ -1,7 +1,41 @@
 import { defineConfig } from 'vite';
 import { fileURLToPath } from 'node:url';
+import fs from 'node:fs';
+import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import { vitePrerenderPlugin } from 'vite-prerender-plugin';
+
+// Embute o CSS do build direto no <head> do index.html e remove o <link
+// rel="stylesheet"> correspondente. O CSS deixa de ser um recurso que bloqueia
+// a renderização no caminho crítico -> melhora FCP e LCP (principalmente no
+// mobile). Roda no final (closeBundle), depois da pré-renderização.
+function inlineCssPlugin() {
+  return {
+    name: 'inline-css',
+    closeBundle() {
+      const dist = fileURLToPath(new URL('./dist', import.meta.url));
+      const htmlPath = path.join(dist, 'index.html');
+      if (!fs.existsSync(htmlPath)) return;
+      let html = fs.readFileSync(htmlPath, 'utf8');
+
+      const linkRe = /<link[^>]+rel="stylesheet"[^>]*href="([^"]+\.css)"[^>]*>/g;
+      let match: RegExpExecArray | null;
+      const links: { tag: string; href: string }[] = [];
+      while ((match = linkRe.exec(html)) !== null) {
+        links.push({ tag: match[0], href: match[1] });
+      }
+
+      for (const { tag, href } of links) {
+        const cssPath = path.join(dist, href.replace(/^\//, ''));
+        if (!fs.existsSync(cssPath)) continue;
+        const css = fs.readFileSync(cssPath, 'utf8');
+        html = html.replace(tag, `<style>${css}</style>`);
+      }
+
+      fs.writeFileSync(htmlPath, html);
+    },
+  };
+}
 
 // Shim mínimo de `document` para a pré-renderização (Node). Algumas libs
 // (framer-motion/lucide) podem tocar em `document` ao serem avaliadas. Injetado
@@ -27,6 +61,7 @@ export default defineConfig({
       renderTarget: '#root',
       prerenderScript: fileURLToPath(new URL('./src/prerender.tsx', import.meta.url)),
     }),
+    inlineCssPlugin(),
     {
       name: 'clear-sw-dev',
       configureServer(server) {
