@@ -27,9 +27,8 @@ export function HeroImages() {
           className="w-full h-auto relative z-10 block dark:hidden hero-image rounded-3xl"
           width={800}
           height={600}
-          loading="eager"
-          decoding="sync"
-          fetchPriority="high"
+          loading="lazy"
+          decoding="async"
         />
       </picture>
 
@@ -46,9 +45,8 @@ export function HeroImages() {
           className="w-full h-auto relative z-10 hidden dark:block hero-image rounded-3xl"
           width={800}
           height={600}
-          loading="eager"
-          decoding="sync"
-          fetchPriority="high"
+          loading="lazy"
+          decoding="async"
         />
       </picture>
     </motion.div>

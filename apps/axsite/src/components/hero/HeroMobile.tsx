@@ -70,9 +70,8 @@ export function HeroMobile() {
               className="w-full h-auto relative z-10 hidden dark:block hero-image rounded-3xl"
               width={400}
               height={300}
-              loading="eager"
-              decoding="sync"
-              fetchPriority="high"
+              loading="lazy"
+              decoding="async"
             />
           </picture>
         </motion.div>
