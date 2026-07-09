@@ -3,7 +3,6 @@ import { hydrateRoot, createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import './i18n';
-import i18n from './i18n';
 import { ThemeProvider } from './contexts/ThemeContext.tsx';
 import { GTMEvents, gtmEvent, trackScrollDepth, trackTimeOnPage } from './utils/gtm.ts';
 
@@ -27,20 +26,9 @@ if (rootElement.hasChildNodes()) {
   createRoot(rootElement).render(app);
 }
 
-// Detecção de idioma DEPOIS da hidratação (o render inicial é sempre pt-BR para
-// bater com o HTML pré-renderizado). Só troca para en-US quando for o caso.
-const applyPreferredLanguage = () => {
-  try {
-    const saved = localStorage.getItem('lang');
-    const wantsEn = saved ? saved === 'en-US' : /^en/i.test(navigator.language || '');
-    if (wantsEn && i18n.language !== 'en-US') {
-      i18n.changeLanguage('en-US');
-    }
-  } catch {
-    // localStorage/navigator indisponíveis — mantém pt-BR.
-  }
-};
-applyPreferredLanguage();
+// A detecção/troca de idioma acontece em um useEffect dentro de <App> (roda
+// APÓS a hidratação), para o 1º render bater com o HTML pré-renderizado (pt-BR)
+// e não gerar erro de hidratação (React #418/#425).
 
 // Rastreamento de cliques via Umami (todos os botões e links). Listener único
 // e delegado — não precisa marcar cada botão. Se o script do Umami ainda não

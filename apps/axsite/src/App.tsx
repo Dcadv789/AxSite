@@ -1,6 +1,7 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
+import i18n from './i18n';
 
 // Lazy loading de componentes não críticos
 const Challenges = lazy(() => import("./components/Challenges").then(module => ({ default: module.Challenges })));
@@ -29,6 +30,21 @@ const SectionFallback = () => (
 );
 
 function App() {
+  // Detecção de idioma APÓS a hidratação (efeito só roda no cliente, depois do
+  // commit). O 1º render é sempre pt-BR — igual ao HTML pré-renderizado — então
+  // não há mismatch de hidratação. Só troca para en-US quando for o caso.
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('lang');
+      const wantsEn = saved ? saved === 'en-US' : /^en/i.test(navigator.language || '');
+      if (wantsEn && i18n.language !== 'en-US') {
+        i18n.changeLanguage('en-US');
+      }
+    } catch {
+      // localStorage/navigator indisponíveis — mantém pt-BR.
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAFAFA] dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
