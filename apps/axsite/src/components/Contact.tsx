@@ -13,8 +13,15 @@ interface FormData {
 
 export function Contact() {
   const { t } = useTranslation();
-  const [num1] = useState(Math.floor(Math.random() * 10) + 1);
-  const [num2] = useState(Math.floor(Math.random() * 10) + 1);
+  // Captcha: valores fixos no 1º render (SSR e início do cliente) para a
+  // hidratação bater (server === cliente). Só randomiza DEPOIS de montar, no
+  // cliente — assim não quebra o SSG com um mismatch de texto (React #418/#425).
+  const [num1, setNum1] = useState(1);
+  const [num2, setNum2] = useState(1);
+  useEffect(() => {
+    setNum1(Math.floor(Math.random() * 10) + 1);
+    setNum2(Math.floor(Math.random() * 10) + 1);
+  }, []);
   const [userAnswer, setUserAnswer] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
